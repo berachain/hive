@@ -78,7 +78,7 @@ fi
 if [ "$HIVE_NETWORK_ID" != "" ]; then
     FLAGS="$FLAGS --network-id $HIVE_NETWORK_ID"
 else
-    FLAGS="$FLAGS --network-id 1337"
+    FLAGS="$FLAGS --network-id 69420"
 fi
 
 # Don't immediately abort, some imports are meant to fail

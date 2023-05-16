@@ -122,7 +122,7 @@ fi
 if [ "$HIVE_NETWORK_ID" != "" ]; then
     FLAGS="$FLAGS --network-id=$HIVE_NETWORK_ID"
 else
-    FLAGS="$FLAGS --network-id=1337"
+    FLAGS="$FLAGS --network-id=69420"
 fi
 
 # Configure sync mode

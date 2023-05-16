@@ -64,7 +64,7 @@ if [ "$HIVE_NETWORK_ID" != "" ]; then
 else
     # Unless otherwise specified by hive, we try to avoid mainnet networkid. If geth detects mainnet network id,
     # then it tries to bump memory quite a lot
-    FLAGS="$FLAGS --networkid 1337"
+    FLAGS="$FLAGS --networkid 69420"
 fi
 
 # If the client is to be run in testnet mode, flag it as such

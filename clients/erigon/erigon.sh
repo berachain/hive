@@ -60,7 +60,7 @@ FLAGS="$FLAGS --db.size.limit 2GB"
 if [ "$HIVE_NETWORK_ID" != "" ]; then
     FLAGS="$FLAGS --networkid $HIVE_NETWORK_ID"
 else
-    FLAGS="$FLAGS --networkid 1337"
+    FLAGS="$FLAGS --networkid 69420"
 fi
 
 # Configure the chain.
