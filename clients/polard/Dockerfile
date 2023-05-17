@@ -1,8 +1,3 @@
-
-
-
-
-
 # syntax=docker/dockerfile:1
 # Copyright (C) 2022, Berachain Foundation. All rights reserved.
 # See the file LICENSE for licensing terms.
@@ -19,17 +14,18 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Use the latest foundry image
-FROM polaris-cosmos:0.0.0 as polaris-hive
+FROM polard-local:v0.0.0 as polaris-hive
 
-RUN apk add --no-cache bash
-RUN apk add --no-cache jq git
+RUN apk add --no-cache bash jq
 
-# Add a default genesis file.
-ADD genesis.json /genesis.json
-
-# Inject the startup script.
+# Add a default genesis file + Inject the startup script
+ADD build_eth_genesis.sh /build_eth_genesis.sh
+ADD polaris_genesis.json /polaris_genesis.json
 ADD mapper.jq /mapper.jq
 ADD version.txt /version.txt
+
+# Build the ethereum style genesis from the cosmos genesis.
+RUN ./build_eth_genesis.sh
 
 # Export the usual networking ports to allow outside access to the node
 EXPOSE 8545 8546 8547 8551 30303 30303/udp
