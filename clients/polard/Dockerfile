@@ -22,7 +22,6 @@ WORKDIR /
 
 # Add a default genesis file + Inject the startup script
 ADD build_eth_genesis.sh /build_eth_genesis.sh
-ADD polaris_genesis.json /polaris_genesis.json
 ADD mapper.jq /mapper.jq
 ADD version.txt /version.txt
 ADD hive-init.sh /hive-init.sh
