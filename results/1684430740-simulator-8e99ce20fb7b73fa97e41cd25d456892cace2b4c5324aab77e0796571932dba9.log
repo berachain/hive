@@ -1,0 +1,68 @@
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_call","params":[{"data":"0xa223e05d","from":"0x0000000000000000000000000000000000000000","to":"0x0000000000000000000000000000000000000314"},"pending"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_syncing"}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa808506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca0000000000000000000000000985cf52da1e8d6e153fc8b9423c5c689b06c7a90000000000000000000000000000000000000000000000000de0b6b3a764000031a00ee51c8b8c511c4267aa111c1b3412732fb3187cd3a5b5709b734cb2245582f8a057883ec2619daee42c7d8cd584dc64cd2a6cb0bd9141df305e0d28ed29c32038"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getBlockByHash","params":["0xf24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10",true]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"block not found"}}
+Unable to fetch `ui` variable: block not found
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa018506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000b29fe7124bc6c1ba98828c26e8b0ef2852c09b660000000000000000000000000000000000000000000000000de0b6b3a764000032a08ad6ae68b0cedafcbd2474ad37863f4f229ca8e00008720e3224ea723b1335e1a01ece65cd3b6571da70ce28a39216d7d300233da490aa320cbe3991f40b014246"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa028506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000b751689ea7ba13dfb7e7b20be68031620740dc430000000000000000000000000000000000000000000000000de0b6b3a764000032a0674a5b4c8d1a21e64838f41f71d725df78e618e9f1c988d0523b47c699447192a02e5a1da2a77946bb2d4c8b32f5b6055d9f7f91bd422b77a3a9cc594627ff7eab"]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"result":false}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getCode","params":["0x0000000000000000000000000000000000000314","0x0"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa038506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000651eaa6dfe77096aa8853ffff44f474b89e9e7d90000000000000000000000000000000000000000000000000de0b6b3a764000031a0e6477fd374c31209a549acf27cc21de757a580cf896b8224f14616944f6d25f1a03d7b647cb6f1c98acf9324f15d70e81468e751488dc17412eb7882bdcb9d5c17"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["0x0",true]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["0x0",false]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+Unable to fetch block f24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10: method handler crashed
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["latest",true]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context"}}
+Could not fetch code for predeployed contract: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa058506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000ad8057f0fc861d4fd7318c5d1a308845c2e2d7ac0000000000000000000000000000000000000000000000000de0b6b3a764000032a00ca5fc0ac301e5da61d12f92bddc982f9afd8d49081b83a3aa497bb5822dac31a07e9f03d2ace836600632c303bf84f095a103c16cfa9b3f5dd2578f115c2d5105"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa048506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000537c23f5fd5329a574d0c53da7305fc5186c15250000000000000000000000000000000000000000000000000de0b6b3a764000032a0e7bb9ea1d6250d1fb71bc642659080cc798b5070dd14b683dbff81851c4b7c17a00a15ae78254ef194e9940eda8154133db541b29560c75eea71fe41ffc3bf9a8d"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_getBlockByHash","params":["0xf24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10",false]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa078506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca0000000000000000000000006d4c00d430200d2a2010af7abf5b06b15c76c69f0000000000000000000000000000000000000000000000000de0b6b3a764000031a00af2fa8c65748cf0cab88ebd89c160f20df9ab101e6c00532a00c521cf643b82a0379794c209f1cc3d552464322a174b93d13adb6d836d15310830b9bccf60fcbb"]}
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa068506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000b917270db5bf90b21e9c64770eef0144491206d30000000000000000000000000000000000000000000000000de0b6b3a764000031a076a80f6b6c108b35d19d0583882d97b014efc7bd0d44591de16001ef8770b1e7a07e71414decbbc55d4b9cd1e5249b9ad6ae14347dd2e07a10dac6696fec332be2"]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"block not found: BlockByNumber [-1]"}}
+Unable to fetch latest block
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]"}}
+Unable to fetch genesis block: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]"}}
+Unable to fetch genesis block: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+Unable to fetch block f24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10: method handler crashed
+>>  {"jsonrpc":"2.0","id":1,"method":"eth_sendRawTransaction","params":["0xf8aa088506fc23ac00830124f894000000000000000000000000000000000000031580b844ef2769ca000000000000000000000000604ec3268f25b1786d6ae74d3e972355d7c9b3350000000000000000000000000000000000000000000000000de0b6b3a764000032a03e6897190fd19c1a7c9823de6c60acc21d690efe9f5b437c366777ea4a16ca73a01b8fb23107bc6f47d84844b8cf0a2c5034ad4f384ee8884fc58c9162e125ab9d"]}
+<<  {"jsonrpc":"2.0","id":1,"error":{"code":-32603,"message":"method handler crashed"}}
+unable to send funding transaction: method handler crashed
+Unable to fetch block f24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10: method handler crashed
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed
+Could not fetch code for predeployed contract: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context
+Unable to fetch latest block
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed
+Unable to fetch genesis block: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]
+Unable to fetch block f24584aea2f75656cf2064042fc1660108f7438a8bc585553c32611be6155f10: method handler crashed
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed
+Unable to fetch `ui` variable: block not found
+unable to send funding transaction: method handler crashed
+Unable to fetch genesis block: PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]
+unable to send funding transaction: method handler crashed
+unable to send funding transaction: method handler crashed

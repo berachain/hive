@@ -1,0 +1,1502 @@
+INFO [05-18|17:25:42.422] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:42.423] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x400330b680
+{"app_message":{"auth":{"accounts":[],"params":{"max_memo_characters":"256","sig_verify_cost_ed25519":"590","sig_verify_cost_secp256k1":"1000","tx_sig_limit":"7","tx_size_cost_per_byte":"10"}},"authz":{"authorization":[]},"bank":{"balances":[],"denom_metadata":[],"params":{"default_send_enabled":true,"send_enabled":[]},"send_enabled":[],"supply":[]},"consensus":null,"crisis":{"constant_fee":{"amount":"1000","denom":"stake"}},"distribution":{"delegator_starting_infos":[],"delegator_withdraw_infos":[],"fee_pool":{"community_pool":[]},"outstanding_rewards":[],"params":{"base_proposer_reward":"0.000000000000000000","bonus_proposer_reward":"0.000000000000000000","community_tax":"0.020000000000000000","withdraw_addr_enabled":true},"previous_proposer":"","validator_accumulated_commissions":[],"validator_current_rewards":[],"validator_historical_rewards":[],"validator_slash_events":[]},"erc20":{"params":{}},"evidence":{"evidence":[]},"evm":{"address_to_contract":{},"hash_to_code":{},"params":{"eth_genesis":"{\"config\":{\"chainId\":69420,\"homesteadBlock\":0,\"daoForkBlock\":0,\"daoForkSupport\":true,\"eip150Block\":0,\"eip150Hash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"eip155Block\":0,\"eip158Block\":0,\"byzantiumBlock\":0,\"constantinopleBlock\":0,\"petersburgBlock\":0,\"istanbulBlock\":0,\"berlinBlock\":0,\"londonBlock\":0,\"arrowGlacierBlock\":0,\"grayGlacierBlock\":0,\"mergeNetsplitBlock\":0,\"terminalTotalDifficulty\":0,\"terminalTotalDifficultyPassed\":true},\"nonce\":\"0x45\",\"timestamp\":\"0x0\",\"extraData\":\"0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa\",\"gasLimit\":\"0x1c9c380\",\"difficulty\":\"0x45\",\"mixHash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"coinbase\":\"0x0000000000000000000000000000000000000000\",\"alloc\":{},\"number\":\"0x0\",\"gasUsed\":\"0x0\",\"parentHash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"baseFeePerGas\":null}","evm_denom":"abera","extra_eips":[]}},"feegrant":{"allowances":[]},"genutil":{"gen_txs":[]},"gov":{"constitution":"","deposit_params":null,"deposits":[],"params":{"burn_proposal_deposit_prevote":false,"burn_vote_quorum":false,"burn_vote_veto":true,"expedited_min_deposit":[{"amount":"50000000","denom":"stake"}],"expedited_threshold":"0.667000000000000000","expedited_voting_period":"86400s","max_deposit_period":"172800s","min_deposit":[{"amount":"10000000","denom":"stake"}],"min_initial_deposit_ratio":"0.000000000000000000","proposal_cancel_dest":"","proposal_cancel_ratio":"0.500000000000000000","quorum":"0.334000000000000000","threshold":"0.500000000000000000","veto_threshold":"0.334000000000000000","voting_period":"172800s"},"proposals":[],"starting_proposal_id":"1","tally_params":null,"votes":[],"voting_params":null},"group":{"group_members":[],"group_policies":[],"group_policy_seq":"0","group_seq":"0","groups":[],"proposal_seq":"0","proposals":[],"votes":[]},"mint":{"minter":{"annual_provisions":"0.000000000000000000","inflation":"0.130000000000000000"},"params":{"blocks_per_year":"6311520","goal_bonded":"0.670000000000000000","inflation_max":"0.200000000000000000","inflation_min":"0.070000000000000000","inflation_rate_change":"0.130000000000000000","mint_denom":"stake"}},"slashing":{"missed_blocks":[],"params":{"downtime_jail_duration":"600s","min_signed_per_window":"0.500000000000000000","signed_blocks_window":"100","slash_fraction_double_sign":"0.050000000000000000","slash_fraction_downtime":"0.010000000000000000"},"signing_infos":[]},"staking":{"delegations":[],"exported":false,"last_total_power":"0","last_validator_powers":[],"params":{"bond_denom":"stake","historical_entries":10000,"max_entries":7,"max_validators":100,"min_commission_rate":"0.000000000000000000","unbonding_time":"1814400s"},"redelegations":[],"unbonding_delegations":[],"validators":[]},"upgrade":{},"vesting":{}},"chain_id":"polaris-2061","gentxs_dir":"","moniker":"localtestnet","node_id":"420b3567d530a4b982955f21ec0c7bf59bb39766"}
+INFO [05-18|17:25:42.881] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:42.881] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40030203c0
+INFO [05-18|17:25:43.299] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:43.300] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4000eb2f00
+INFO [05-18|17:25:43.610] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:43.610] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40024dc000
+
+- address: polar1pka3nvt3ya5cju5pyz40m3wv6254fg9qky9c72
+  name: dev0
+  pubkey: '{"@type":"/polaris.crypto.ethsecp256k1.v1.PubKey","key":"A5j1zeKrucNOgEoXE7pOJJzMFHsY6CmW/h2XNPtsljqS"}'
+  type: local
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+reunion vanish pulp swing wage jar update mimic muscle grit slight teach alter swear hint fabric west tonight wrist globe drama stomach finger feel
+INFO [05-18|17:25:44.007] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:44.007] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4000f1ccc0
+
+- address: polar1s9ff0ujtfk2jzv9jnfat04862s5p8pskc57m70
+  name: dev1
+  pubkey: '{"@type":"/polaris.crypto.ethsecp256k1.v1.PubKey","key":"AuJ6bh+25p6f5AYm1TPWE5SB1GUrdTJGUvyNorxcKY8w"}'
+  type: local
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+eyebrow fee tail prepare bamboo nerve crouch guard club health ahead color place little love fire clay dentist suspect age olympic section train depth
+INFO [05-18|17:25:44.356] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:44.356] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4001318780
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+obvious tree reopen castle license rail sign feed middle live saddle among toast wrist athlete clap asthma hotel era satisfy crater anxiety prepare sun
+- address: polar14t9z9p0elt53zz4m9uewdagfhxv2atvfp2xudn
+  name: dev2
+  pubkey: '{"@type":"/polaris.crypto.ethsecp256k1.v1.PubKey","key":"Aik1YeoQvY7tMLULdExWoKXvj1kMPqHpKgT8p6+7KW46"}'
+  type: local
+
+INFO [05-18|17:25:45.059] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:45.059] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40019e00c0
+INFO [05-18|17:25:45.217] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:45.217] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4001b8d080
+INFO [05-18|17:25:45.463] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:45.464] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40015064e0
+INFO [05-18|17:25:45.858] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:45.858] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40028698c0
+INFO [05-18|17:25:46.003] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:46.003] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40025f6d80
+Genesis transaction written to "/config/gentx/gentx-420b3567d530a4b982955f21ec0c7bf59bb39766.json"
+INFO [05-18|17:25:46.156] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:46.156] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40024e7ec0
+{"app_message":{"auth":{"accounts":[{"@type":"/cosmos.auth.v1beta1.BaseAccount","account_number":"0","address":"polar1pka3nvt3ya5cju5pyz40m3wv6254fg9qky9c72","pub_key":null,"sequence":"0"},{"@type":"/cosmos.auth.v1beta1.BaseAccount","account_number":"1","address":"polar1s9ff0ujtfk2jzv9jnfat04862s5p8pskc57m70","pub_key":null,"sequence":"0"},{"@type":"/cosmos.auth.v1beta1.BaseAccount","account_number":"2","address":"polar14t9z9p0elt53zz4m9uewdagfhxv2atvfp2xudn","pub_key":null,"sequence":"0"},{"@type":"/cosmos.auth.v1beta1.BaseAccount","account_number":"3","address":"polar1yrene6g2zwjttemf0c65fscg8w8c55w5vhc9hd","pub_key":null,"sequence":"0"}],"params":{"max_memo_characters":"256","sig_verify_cost_ed25519":"590","sig_verify_cost_secp256k1":"1000","tx_sig_limit":"7","tx_size_cost_per_byte":"10"}},"authz":{"authorization":[]},"bank":{"balances":[{"address":"polar1pka3nvt3ya5cju5pyz40m3wv6254fg9qky9c72","coins":[{"amount":"100000000000000000000000000","denom":"abera"}]},{"address":"polar1yrene6g2zwjttemf0c65fscg8w8c55w5vhc9hd","coins":[{"amount":"69000000000000000000000000","denom":"abera"}]},{"address":"polar1s9ff0ujtfk2jzv9jnfat04862s5p8pskc57m70","coins":[{"amount":"100000000000000000000000000","denom":"abera"}]},{"address":"polar14t9z9p0elt53zz4m9uewdagfhxv2atvfp2xudn","coins":[{"amount":"100000000000000000000000000","denom":"abera"}]}],"denom_metadata":[],"params":{"default_send_enabled":true,"send_enabled":[]},"send_enabled":[],"supply":[{"amount":"369000000000000000000000000","denom":"abera"}]},"consensus":null,"crisis":{"constant_fee":{"amount":"1000","denom":"abera"}},"distribution":{"delegator_starting_infos":[],"delegator_withdraw_infos":[],"fee_pool":{"community_pool":[]},"outstanding_rewards":[],"params":{"base_proposer_reward":"0.000000000000000000","bonus_proposer_reward":"0.000000000000000000","community_tax":"0.020000000000000000","withdraw_addr_enabled":true},"previous_proposer":"","validator_accumulated_commissions":[],"validator_current_rewards":[],"validator_historical_rewards":[],"validator_slash_events":[]},"erc20":{"params":{}},"evidence":{"evidence":[]},"evm":{"address_to_contract":{},"hash_to_code":{},"params":{"eth_genesis":"{\"config\":{\"chainId\":69420,\"homesteadBlock\":0,\"daoForkBlock\":0,\"daoForkSupport\":true,\"eip150Block\":0,\"eip150Hash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"eip155Block\":0,\"eip158Block\":0,\"byzantiumBlock\":0,\"constantinopleBlock\":0,\"petersburgBlock\":0,\"istanbulBlock\":0,\"berlinBlock\":0,\"londonBlock\":0,\"arrowGlacierBlock\":0,\"grayGlacierBlock\":0,\"mergeNetsplitBlock\":0,\"terminalTotalDifficulty\":0,\"terminalTotalDifficultyPassed\":true},\"nonce\":\"0x45\",\"timestamp\":\"0x0\",\"extraData\":\"0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa\",\"gasLimit\":\"0x1c9c380\",\"difficulty\":\"0x45\",\"mixHash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"coinbase\":\"0x0000000000000000000000000000000000000000\",\"alloc\":{},\"number\":\"0x0\",\"gasUsed\":\"0x0\",\"parentHash\":\"0x0000000000000000000000000000000000000000000000000000000000000000\",\"baseFeePerGas\":null}","evm_denom":"abera","extra_eips":[]}},"feegrant":{"allowances":[]},"genutil":{"gen_txs":[{"auth_info":{"fee":{"amount":[],"gas_limit":"200000","granter":"","payer":""},"signer_infos":[{"mode_info":{"single":{"mode":"SIGN_MODE_DIRECT"}},"public_key":{"@type":"/polaris.crypto.ethsecp256k1.v1.PubKey","key":"A5j1zeKrucNOgEoXE7pOJJzMFHsY6CmW/h2XNPtsljqS"},"sequence":"0"}],"tip":null},"body":{"extension_options":[],"memo":"420b3567d530a4b982955f21ec0c7bf59bb39766@172.17.0.4:26656","messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","commission":{"max_change_rate":"0.010000000000000000","max_rate":"0.200000000000000000","rate":"0.100000000000000000"},"delegator_address":"","description":{"details":"","identity":"","moniker":"localtestnet","security_contact":"","website":""},"min_self_delegation":"1","pubkey":{"@type":"/cosmos.crypto.ed25519.PubKey","key":"eNQqDtZxysWglbcZzgtAnfq9HjsOjEcTB5jNTKh8ZTE="},"validator_address":"polarvaloper1pka3nvt3ya5cju5pyz40m3wv6254fg9q2k4749","value":{"amount":"1000000000000000000000","denom":"abera"}}],"non_critical_extension_options":[],"timeout_height":"0"},"signatures":["2BBfCE/iqAZ5B9Ym3MKqVkzNO6sh44PAFPIf0GyzemtPOPcgjazm6WXwI3c9I7cfZUfEn4MjGUFSoOPFfFHCWQA="]}]},"gov":{"constitution":"","deposit_params":{"min_deposit":[{"denom":"abera"}]},"deposits":[],"params":{"burn_proposal_deposit_prevote":false,"burn_vote_quorum":false,"burn_vote_veto":true,"expedited_min_deposit":[{"amount":"50000000","denom":"stake"}],"expedited_threshold":"0.667000000000000000","expedited_voting_period":"86400s","max_deposit_period":"172800s","min_deposit":[{"amount":"10000000","denom":"stake"}],"min_initial_deposit_ratio":"0.000000000000000000","proposal_cancel_dest":"","proposal_cancel_ratio":"0.500000000000000000","quorum":"0.334000000000000000","threshold":"0.500000000000000000","veto_threshold":"0.334000000000000000","voting_period":"172800s"},"proposals":[],"starting_proposal_id":"1","tally_params":null,"votes":[],"voting_params":null},"group":{"group_members":[],"group_policies":[],"group_policy_seq":"0","group_seq":"0","groups":[],"proposal_seq":"0","proposals":[],"votes":[]},"mint":{"minter":{"annual_provisions":"0.000000000000000000","inflation":"0.130000000000000000"},"params":{"blocks_per_year":"6311520","goal_bonded":"0.670000000000000000","inflation_max":"0.200000000000000000","inflation_min":"0.070000000000000000","inflation_rate_change":"0.130000000000000000","mint_denom":"abera"}},"slashing":{"missed_blocks":[],"params":{"downtime_jail_duration":"600s","min_signed_per_window":"0.500000000000000000","signed_blocks_window":"100","slash_fraction_double_sign":"0.050000000000000000","slash_fraction_downtime":"0.010000000000000000"},"signing_infos":[]},"staking":{"delegations":[],"exported":false,"last_total_power":"0","last_validator_powers":[],"params":{"bond_denom":"abera","historical_entries":10000,"max_entries":7,"max_validators":100,"min_commission_rate":"0.000000000000000000","unbonding_time":"1814400s"},"redelegations":[],"unbonding_delegations":[],"validators":[]},"upgrade":{},"vesting":{}},"chain_id":"polaris-2061","gentxs_dir":"/config/gentx","moniker":"localtestnet","node_id":"420b3567d530a4b982955f21ec0c7bf59bb39766"}
+INFO [05-18|17:25:46.300] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:46.300] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4002169680
+File at /config/genesis.json is a valid genesis file
+INFO [05-18|17:25:46.522] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:46.522] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x40020408a0
+INFO [05-18|17:25:46.612] Gasprice oracle is ignoring threshold set threshold=2
+INFO [05-18|17:25:46.612] called eth.rpc.backend.SubscribeChainHeadEvent ch=0x4003d86ea0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d00300, feegrant}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x400321f1c0, upgrade}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x400321fae0, crisis}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4001aa2eb0, authz}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4001aa3920, consensus}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4001aaa030, evm}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002ce9eb0, bank}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002cf24b0, auth}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d012f0, slashing}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d17990, distribution}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d01fe0, staking}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d0cbf0, evidence}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d0d680, mint}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d16340, group}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4001aa2970, erc20}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002cf2cf0, params}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mmodule=[0mserver [36mstore_key=[0m"KVStoreKey{0x4002d17010, gov}" [36mversion=[0m0
+[90m5:25PM[0m [32mINF[0m starting node with ABCI CometBFT in-process [36mmodule=[0mserver
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mmultiAppConn [36mmodule=[0mproxy [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mconnection=[0mquery [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mconnection=[0msnapshot [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mconnection=[0mmempool [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mconnection=[0mconsensus [36mimpl=[0mlocalClient [36mmodule=[0mabci-client [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mEventBus [36mmodule=[0mevents [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mPubSub [36mmodule=[0mpubsub [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mIndexerService [36mmodule=[0mtxindex [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m ABCI Handshake App Info [36mhash=[0m [36mheight=[0m0 [36mmodule=[0mconsensus [36mprotocol-version=[0m0 [36msoftware-version=[0m
+[90m5:25PM[0m [32mINF[0m ABCI Replay Blocks [36mappHeight=[0m0 [36mmodule=[0mconsensus [36mstateHeight=[0m0 [36mstoreHeight=[0m0
+[90m5:25PM[0m [32mINF[0m InitChain [36mchainID=[0mpolaris-2061 [36minitialHeight=[0m1 [36mmodule=[0mserver
+[90m5:25PM[0m [32mINF[0m initializing blockchain state from genesis.json [36mmodule=[0mserver
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m1/12 [36mmodule=[0mx/crisis [36mname=[0mbank/nonnegative-outstanding
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m2/12 [36mmodule=[0mx/crisis [36mname=[0mbank/total-supply
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m3/12 [36mmodule=[0mx/crisis [36mname=[0mgroup/Group-TotalWeight
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m4/12 [36mmodule=[0mx/crisis [36mname=[0mstaking/module-accounts
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m5/12 [36mmodule=[0mx/crisis [36mname=[0mstaking/nonnegative-power
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m6/12 [36mmodule=[0mx/crisis [36mname=[0mstaking/positive-delegation
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m7/12 [36mmodule=[0mx/crisis [36mname=[0mstaking/delegator-shares
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m8/12 [36mmodule=[0mx/crisis [36mname=[0mdistribution/nonnegative-outstanding
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m9/12 [36mmodule=[0mx/crisis [36mname=[0mdistribution/can-withdraw
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m10/12 [36mmodule=[0mx/crisis [36mname=[0mdistribution/reference-count
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m11/12 [36mmodule=[0mx/crisis [36mname=[0mdistribution/module-account
+[90m5:25PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m12/12 [36mmodule=[0mx/crisis [36mname=[0mgov/module-account
+[90m5:25PM[0m [32mINF[0m asserted all invariants [36mduration=[0m0.904833 [36mheight=[0m0 [36mmodule=[0mx/crisis
+[90m5:25PM[0m [32mINF[0m Completed ABCI Handshake - CometBFT and App are synced [36mappHash=[0m [36mappHeight=[0m0 [36mmodule=[0mconsensus
+[90m5:25PM[0m [32mINF[0m Version info [36mabci=[0m1.0.0 [36mblock=[0m11 [36mcommit_hash=[0m [36mmodule=[0mserver [36mp2p=[0m8 [36mtendermint_version=[0m0.37.0
+[90m5:25PM[0m [32mINF[0m This node is a validator [36maddr=[0mD5BE7BFF8D0339CAB4A7315AD624A45C74521CA9 [36mmodule=[0mconsensus [36mpubKey=[0meNQqDtZxysWglbcZzgtAnfq9HjsOjEcTB5jNTKh8ZTE=
+[90m5:25PM[0m [32mINF[0m P2P Node ID [36mID=[0m420b3567d530a4b982955f21ec0c7bf59bb39766 [36mfile=[0m/config/node_key.json [36mmodule=[0mp2p
+[90m5:25PM[0m [32mINF[0m Adding persistent peers [36maddrs=[0m[] [36mmodule=[0mp2p
+[90m5:25PM[0m [32mINF[0m Adding unconditional peer ids [36mids=[0m[] [36mmodule=[0mp2p
+[90m5:25PM[0m [32mINF[0m Add our address to book [36maddr=[0m{"id":"420b3567d530a4b982955f21ec0c7bf59bb39766","ip":"0.0.0.0","port":26656} [36mbook=[0m/config/addrbook.json [36mmodule=[0mp2p
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mNode [36mmodule=[0mserver [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m Starting pprof server [36mladdr=[0mlocalhost:6060 [36mmodule=[0mserver
+[90m5:25PM[0m [32mINF[0m serve [36mmodule=[0mrpc-server [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0m"P2P Switch" [36mmodule=[0mp2p [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mPEX [36mmodule=[0mpex [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mbook=[0m/config/addrbook.json [36mimpl=[0mAddrBook [36mmodule=[0mp2p [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mReactor [36mmodule=[0mblockchain [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mConsensusReactor [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m Reactor  [36mmodule=[0mconsensus [36mwaitSync=[0mfalse
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mConsensusState [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mbaseWAL [36mmodule=[0mconsensus [36mmsg=[0m{} [36mwal=[0m/data/cs.wal/wal
+[90m5:25PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m10
+[90m5:25PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mGroup [36mmodule=[0mconsensus [36mmsg=[0m{} [36mwal=[0m/data/cs.wal/wal
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mTimeoutTicker [36mmodule=[0mconsensus [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m Searching for height [36mheight=[0m1 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/data/cs.wal/wal
+[90m5:25PM[0m [32mINF[0m Searching for height [36mheight=[0m0 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/data/cs.wal/wal
+[90m5:25PM[0m [32mINF[0m Found [36mheight=[0m0 [36mindex=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/data/cs.wal/wal
+[90m5:25PM[0m [32mINF[0m Catchup by replaying consensus messages [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m5:25PM[0m [32mINF[0m Replay: Done [36mmodule=[0mconsensus
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mEvidence [36mmodule=[0mevidence [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m service start [36mimpl=[0mStateSync [36mmodule=[0mstatesync [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m Saving AddrBook to file [36mbook=[0m/config/addrbook.json [36mmodule=[0mp2p [36msize=[0m0
+[90m5:25PM[0m [32mINF[0m starting gRPC server... [36maddress=[0mlocalhost:9090 [36mmodule=[0mgrpc-server
+[90m5:25PM[0m [32mINF[0m starting API server... [36maddress=[0mtcp://localhost:1317 [36mmodule=[0mapi-server
+[90m5:25PM[0m [32mINF[0m serve [36mmodule=[0mapi-server [36mmsg=[0m{}
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.ChainConfig [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.SubscribeLogsEvent [36mch=[0m"marshaling error: json: unsupported type: chan<- []*types.Log" [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.SubscribeRemovedLogsEvent [36mch=[0m"marshaling error: json: unsupported type: chan<- core.RemovedLogsEvent" [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.SubscribeChainEvent [36mch=[0m"marshaling error: json: unsupported type: chan<- core.ChainEvent" [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Starting peer-to-peer node [36minstance=[0mpolaris-geth/linux-arm64/go1.20.4 [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m New local node record [36mid=[0m68c36c697532836eaf56e274cd482ea1bb6a34d13a74890be4a517d1be7dfd38 [36mip=[0m127.0.0.1 [36mmodule=[0mpolaris-geth [36mseq=[0m1684430750662 [36mtcp=[0m0 [36mudp=[0m57314
+[90m5:25PM[0m [32mINF[0m Started P2P networking [36mmodule=[0mpolaris-geth [36mself=[0menode://df8f48213c716ed6f1d290b27e0131e8f84f5b04410e446070ff92dccc76d408713b26437501848a3bb10499bbd6372d9a387f371eb4135d577c95168ba1e1b3@127.0.0.1:0?discport=57314
+[90m5:25PM[0m [32mINF[0m HTTP server started [36mauth=[0mfalse [36mcors=[0m* [36mendpoint=[0m{"IP":"::","Port":8545,"Zone":""} [36mmodule=[0mpolaris-geth [36mprefix=[0m [36mvhosts=[0m*
+[90m5:25PM[0m [32mINF[0m GraphQL enabled [36mmodule=[0mpolaris-geth [36murl=[0mhttp://[::]:8545/graphql
+[90m5:25PM[0m [32mINF[0m GraphQL UI enabled [36mmodule=[0mpolaris-geth [36murl=[0mhttp://[::]:8545/graphql/ui
+[90m5:25PM[0m [32mINF[0m WebSocket enabled [36mmodule=[0mpolaris-geth [36murl=[0mws://[::]:8546
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.StateAndHeaderByNumberOrHash [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mnumber=[0mpending
+[90m5:25PM[0m [32mINF[0m Served eth_call [36mconn=[0m172.17.0.3:59982 [36mduration=[0m0.878458 [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.SyncProgress [36mmodule=[0mpolaris-geth [36msync_progress=[0m"not implemented"
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 97 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4003afe4c0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400467c1c0, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400467c1c0?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400467c1c0?, 0x3e54c1334262c9bf?, 0xa734c8910d59367f?}, 0x1a86210?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400467c1c0?, 0x4001d744e8?, 0x40c504?}, 0x1d744f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400467c1c0, 0x1a6, 0x1a6}, 0x4001d745f8?, {0x36a8?, {0x0?, 0x4001d08153?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400467c1c0, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001d0e0c0?, {0x4001d08100?, 0x4001d74758?}, {0x400467c1c0?, 0x4001d746f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x400156fe60)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001ca3098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x400156fe60?, {0x3766598?, 0x4003de4460?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003de4460}, {0xffff74f48f00, 0x4003c37bc0}, 0x400156fe60)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003de4460}, {0x40001cc8f0, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff7500a3d8?}, {0x2a725ef, 0x4}, {0x4003de4500, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003de4500?, 0x0?, 0x4003694150?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003de4460}, {0x4003acc5e8, 0x16}, {0x4003694138, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001d02000?, {0x3766598?, 0x4003de4460?}, 0x4002078000, 0x1?, {0x4003694138?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4002038360, 0x4001a86030, 0x4002078000)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4002038360, 0x4001a86090?, 0x4002078000)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a86030)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 225 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x400206f3e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001ef1500, 0x1a4, 0x1a4})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001ef1500?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001ef1500?, 0xb59d822a8efcd7e6?, 0x9cca97ae87cc7f0d?}, 0x15199b0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001ef1500?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001ef1500, 0x1a4, 0x1a4}, 0x0?, {0x83f?, {0x0?, 0x4156dc?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001ef1500, 0x1a4, 0x1a4})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001b506c8?, {0x41a070?, 0x503cb40?}, {0x4001ef1500?, 0xffff75373ca0?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001c948a0)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001c948a0?, {0x3766598?, 0x4003be4cd0?}, 0x0?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003be4cd0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001c948a0)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003be4cd0}, {0x400047fd90, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff74fc56e8?}, {0x2a725ef, 0x4}, {0x4003be4d70, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003be4d70?, 0x0?, 0x4000380cc0?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003be4cd0}, {0x40027a65d0, 0x16}, {0x4000380ca8, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e160?, {0x3766598?, 0x4003be4cd0?}, 0x4000daa150, 0x1?, {0x4000380ca8?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004a9b170, 0x4001518d50, 0x4000daa150)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004a9b170, 0x4001518db0?, 0x4000daa150)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001518d50)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:59996 [36mduration=[0m2.455333 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:60010 [36mduration=[0m1.905416 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 276 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4002133400})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400159d880, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400159d880?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400159d880?, 0x4f3d63e1093c22d8?, 0x51f10acdfb8145a4?}, 0x1ad11a0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400159d880?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400159d880, 0x1a6, 0x1a6}, 0x4001b545f8?, {0x36a8?, {0x0?, 0x4002c363d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400159d880, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4003be78c0?, {0x4002c36380?, 0x4001b54758?}, {0x400159d880?, 0x4001b546f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4003be7680)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001d69098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4003be7680?, {0x3766598?, 0x4004b26780?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004b26780}, {0xffff74f48f00, 0x4003c37bc0}, 0x4003be7680)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004b26780}, {0x4004b28210, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff75011590?}, {0x2a725ef, 0x4}, {0x4004b26820, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4004b26820?, 0x0?, 0x400138f7b8?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4004b26780}, {0x40027a66d8, 0x16}, {0x400138f788, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e2c0?, {0x3766598?, 0x4004b26780?}, 0x4000daa230, 0x1?, {0x400138f788?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004a9b710, 0x4001ad0fc0, 0x4000daa230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004a9b710, 0x4001ad1020?, 0x4000daa230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001ad0fc0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:60012 [36mduration=[0m1.538792 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_getBlockByHash crashed: runtime error: invalid memory address or nil pointer dereference
+goroutine 263 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x26315e0, 0x4eb33e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/types.Context.KVStore({{0x0, 0x0}, {0x0, 0x0}, {{0x0, 0x0}, {0x0, 0x0}, 0x0, {0x0, ...}, ...}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/types/context.go:289 +0x28
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical.(*plugin).GetBlockByHash(0x4003d94700, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical/historical_data.go:144 +0x70
+pkg.berachain.dev/polaris/eth/core.(*blockchain).GetBlockByHash(0x4003d94a80, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/eth/core/chain_reader.go:219 +0x1dc
+pkg.berachain.dev/polaris/eth/rpc.(*backend).polarisBlockByHash(...)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:612
+pkg.berachain.dev/polaris/eth/rpc.(*backend).BlockByHash(0x4003c37bc0, {0x4004ad7680?, 0x400151f4a8?}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...})
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:254 +0x48
+github.com/ethereum/go-ethereum/ethapi.(*BlockChainAPI).GetBlockByHash(0x4001747750, {0x3766598, 0x4004ad7680}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...}, ...)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:782 +0x4c
+reflect.Value.call({0x4000cd3260?, 0x4000eafa28?, 0xffff74f413b8?}, {0x2a725ef, 0x4}, {0x4001c69500, 0x4, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4000cd3260?, 0x4000eafa28?, 0x2?}, {0x4001c69500?, 0x10?, 0x40014c1a8b?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c4d2c0, {0x3766598?, 0x4004ad7680}, {0x4004bfb698, 0x12}, {0x4001a8f950, 0x2, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x40021c9130?, {0x3766598?, 0x4004ad7680?}, 0x4000ccc380, 0x2?, {0x4001a8f950?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003ce21b0, 0x4001a8f890, 0x4000ccc380)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003ce21b0, 0x4001a8f8f0?, 0x4000ccc380)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a8f890)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByHash [36mconn=[0m172.17.0.3:59982 [36mduration=[0m0.479333 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 265 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001c63f60})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001ce61c0, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001ce61c0?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001ce61c0?, 0x9e014a1140b8962b?, 0xdccc7c6f9adcf041?}, 0x1a8ff20?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001ce61c0?, 0x40010584e8?, 0x40c504?}, 0x10584f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001ce61c0, 0x1a6, 0x1a6}, 0x40010585f8?, {0x36a8?, {0x0?, 0x4001c4e353?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001ce61c0, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001c69980?, {0x4001c4e300?, 0x4001058758?}, {0x4001ce61c0?, 0x40010586f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001c69740)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001d6d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001c69740?, {0x3766598?, 0x4004ad78b0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004ad78b0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001c69740)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004ad78b0}, {0x400265f600, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff7500c4f8?}, {0x2a725ef, 0x4}, {0x4004ad7950, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4004ad7950?, 0x0?, 0x40011ab188?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4004ad78b0}, {0x4004bfb7b8, 0x16}, {0x40011ab128, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4000f238c0?, {0x3766598?, 0x4004ad78b0?}, 0x4000ccc460, 0x1?, {0x40011ab128?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003ce2510, 0x4001a8fd70, 0x4000ccc460)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003ce2510, 0x4001a8fdd0?, 0x4000ccc460)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a8fd70)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:59984 [36mduration=[0m0.648625 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.StateAndHeaderByNumberOrHash [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [32mINF[0m Served eth_getCode [36mconn=[0m172.17.0.3:59996 [36mduration=[0m0.231667 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mnumber=[0mlatest
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mconn=[0m172.17.0.3:59982 [36mduration=[0m0.109125 [36merr=[0m"block not found: BlockByNumber [-1]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mconn=[0m172.17.0.3:60012 [36mduration=[0m0.261458 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 237 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x400206f900})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001ef1880, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001ef1880?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001ef1880?, 0xf51e13e679541759?, 0xc98f294f552395fb?}, 0x1b00030?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001ef1880?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001ef1880, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x40004891d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001ef1880, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001c95260?, {0x4000489180?, 0x4001b50758?}, {0x4001ef1880?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001c95080)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001c95080?, {0x3766598?, 0x4003be5090?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003be5090}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001c95080)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003be5090}, {0x4001cd2000, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff74fc56e8?}, {0x2a725ef, 0x4}, {0x4003be5130, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003be5130?, 0x0?, 0x4000381e48?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003be5090}, {0x400285d4b8, 0x16}, {0x4000381e00, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb91e0?, {0x3766598?, 0x4003be5090?}, 0x4003b329a0, 0x1?, {0x4000381e00?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfc1b0, 0x4001519e30, 0x4003b329a0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfc1b0, 0x4001519e90?, 0x4003b329a0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001519e30)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:60040 [36mduration=[0m0.402542 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 293 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4003afeba0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400467c540, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400467c540?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400467c540?, 0x3c0c00c033daacca?, 0xc7ebb89f3a314c39?}, 0x1a86f30?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400467c540?, 0x4001d744e8?, 0x40c504?}, 0x1d744f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400467c540, 0x1a6, 0x1a6}, 0x4001d745f8?, {0x36a8?, {0x0?, 0x4001d08553?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400467c540, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001d0e900?, {0x4001d08500?, 0x4001d74758?}, {0x400467c540?, 0x4001d746f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001d0e720)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001ca3098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001d0e720?, {0x3766598?, 0x4003de4cd0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003de4cd0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001d0e720)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003de4cd0}, {0x4001d7e210, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff7500a3d8?}, {0x2a725ef, 0x4}, {0x4003de4d70, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003de4d70?, 0x0?, 0x4003694888?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003de4cd0}, {0x4003acc9a8, 0x16}, {0x4003694870, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001d02160?, {0x3766598?, 0x4003de4cd0?}, 0x4002078230, 0x1?, {0x4003694870?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4002038c60, 0x4001a86d80, 0x4002078230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4002038c60, 0x4001a86de0?, 0x4002078230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a86d80)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:59996 [36mduration=[0m1.237209 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mconn=[0m172.17.0.3:60046 [36mduration=[0m0.34375 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 239 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x400206fe20})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001ef1c00, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001ef1c00?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001ef1c00?, 0x89c8152cc687689a?, 0x3785abe3a4fc394a?}, 0x1b00690?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001ef1c00?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001ef1c00, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x40004892d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001ef1c00, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001c957a0?, {0x4000489280?, 0x4001b50758?}, {0x4001ef1c00?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001c955c0)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001c955c0?, {0x3766598?, 0x4003be53b0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003be53b0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001c955c0)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003be53b0}, {0x4001cd2210, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff74fc56e8?}, {0x2a725ef, 0x4}, {0x4003be5450, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003be5450?, 0x0?, 0x4001584570?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003be53b0}, {0x400285d800, 0x16}, {0x4001584558, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb9340?, {0x3766598?, 0x4003be53b0?}, 0x4003b32e00, 0x1?, {0x4001584558?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfcb40, 0x4001b00450, 0x4003b32e00)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfcb40, 0x4001b004b0?, 0x4003b32e00)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b00450)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:59982 [36mduration=[0m0.498625 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 280 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4002133aa0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400159dc00, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400159dc00?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400159dc00?, 0x97a0a936abbe0021?, 0x8cc28730065449f6?}, 0x1ad1c50?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400159dc00?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400159dc00, 0x1a6, 0x1a6}, 0x4001b545f8?, {0x36a8?, {0x0?, 0x4002c364d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400159dc00, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001dfa0c0?, {0x4002c36480?, 0x4001b54758?}, {0x400159dc00?, 0x4001b546f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4003be7ec0)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001d69098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4003be7ec0?, {0x3766598?, 0x4004b26d70?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004b26d70}, {0xffff74f48f00, 0x4003c37bc0}, 0x4003be7ec0)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004b26d70}, {0x4004b28420, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff75011590?}, {0x2a725ef, 0x4}, {0x4004b26e10, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4004b26e10?, 0x0?, 0x400138ff20?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4004b26d70}, {0x40027a74d0, 0x16}, {0x400138ff08, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e420?, {0x3766598?, 0x4004b26d70?}, 0x4000daa460, 0x1?, {0x400138ff08?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004a9bef0, 0x4001ad1aa0, 0x4000daa460)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004a9bef0, 0x4001ad1b00?, 0x4000daa460)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001ad1aa0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:60040 [36mduration=[0m0.311792 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_getBlockByHash crashed: runtime error: invalid memory address or nil pointer dereference
+goroutine 295 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x26315e0, 0x4eb33e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/types.Context.KVStore({{0x0, 0x0}, {0x0, 0x0}, {{0x0, 0x0}, {0x0, 0x0}, 0x0, {0x0, ...}, ...}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/types/context.go:289 +0x28
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical.(*plugin).GetBlockByHash(0x4003d94700, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical/historical_data.go:144 +0x70
+pkg.berachain.dev/polaris/eth/core.(*blockchain).GetBlockByHash(0x4003d94a80, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/eth/core/chain_reader.go:219 +0x1dc
+pkg.berachain.dev/polaris/eth/rpc.(*backend).polarisBlockByHash(...)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:612
+pkg.berachain.dev/polaris/eth/rpc.(*backend).BlockByHash(0x4003c37bc0, {0x4003de4ff0?, 0x4001d6d4a8?}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...})
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:254 +0x48
+github.com/ethereum/go-ethereum/ethapi.(*BlockChainAPI).GetBlockByHash(0x4001747750, {0x3766598, 0x4003de4ff0}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...}, ...)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:782 +0x4c
+reflect.Value.call({0x4000cd3260?, 0x4000eafa28?, 0xffff7537e4d8?}, {0x2a725ef, 0x4}, {0x4001d0ec60, 0x4, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4000cd3260?, 0x4000eafa28?, 0x2?}, {0x4001d0ec60?, 0x10?, 0x400321540b?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c4d2c0, {0x3766598?, 0x4003de4ff0}, {0x4003accb40, 0x12}, {0x4001a87470, 0x2, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4000fc9c20?, {0x3766598?, 0x4003de4ff0?}, 0x4002078310, 0x2?, {0x4001a87470?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x40020390e0, 0x4001a873b0, 0x4002078310)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x40020390e0, 0x4001a87410?, 0x4002078310)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a873b0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByHash [36mconn=[0m172.17.0.3:60012 [36mduration=[0m0.108834 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 241 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001f06340})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f08000, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f08000?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f08000?, 0x322a1d6f07e65064?, 0xeeb3e04ef5c3b9d1?}, 0x1b00c30?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f08000?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f08000, 0x1a6, 0x1a6}, 0xffff75008c18?, {0x1?, {0x0?, 0x4156dc?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f08000, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001b506c8?, {0x41a070?, 0x503cb40?}, {0x4001f08000?, 0xffff75008c18?, 0x31?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001c95b00)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001c95b00?, {0x3766598?, 0x4003be56d0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003be56d0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001c95b00)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003be56d0}, {0x4001cd2420, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafb58?, 0xffff74fc56e8?}, {0x2a725ef, 0x4}, {0x4003be5770, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafb58?, 0x1?}, {0x4003be5770?, 0x0?, 0x4001584b58?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c64180, {0x3766598?, 0x4003be56d0}, {0x400285d998, 0x16}, {0x4001584b28, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb94a0?, {0x3766598?, 0x4003be56d0?}, 0x4003b32ee0, 0x1?, {0x4001584b28?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfcfc0, 0x4001b00a80, 0x4003b32ee0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfcfc0, 0x4001b00ae0?, 0x4003b32ee0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b00a80)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mconn=[0m172.17.0.3:60040 [36mduration=[0m0.802041 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 337 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001f06940})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f08380, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f08380?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f08380?, 0x1964fc96b4f79836?, 0xc9d507a0c10a2e8c?}, 0x1b017a0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f08380?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f08380, 0x1a6, 0x1a6}, 0x4001b505e0?, {0x36a8?, {0x0?, 0x427f30?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f08380, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001b506b8?, {0x415674?, 0x4001b50758?}, {0x4001f08380?, 0x4001b506f8?, 0x50305c0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001f5b200)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001f5b200?, {0x3766598?, 0x4003be5ef0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003be5ef0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001f5b200)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003be5ef0}, {0x4001cd2630, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74fc56e8?}, {0x2a725ef, 0x4}, {0x4003be5f40, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4003be5f40?, 0x0?, 0x4001585248?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4003be5ef0}, {0x400285dc80, 0x16}, {0x4001585218, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb9600?, {0x3766598?, 0x4003be5ef0?}, 0x4003b33030, 0x1?, {0x4001585218?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfd5f0, 0x4001b01620, 0x4003b33030)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfd5f0, 0x4003be5ef0?, 0x4003b33030)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b01620)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.924083 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_getBlockByHash crashed: runtime error: invalid memory address or nil pointer dereference
+goroutine 342 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x26315e0, 0x4eb33e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/types.Context.KVStore({{0x0, 0x0}, {0x0, 0x0}, {{0x0, 0x0}, {0x0, 0x0}, 0x0, {0x0, ...}, ...}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/types/context.go:289 +0x28
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical.(*plugin).GetBlockByHash(0x4003d94700, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical/historical_data.go:144 +0x70
+pkg.berachain.dev/polaris/eth/core.(*blockchain).GetBlockByHash(0x4003d94a80, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/eth/core/chain_reader.go:219 +0x1dc
+pkg.berachain.dev/polaris/eth/rpc.(*backend).polarisBlockByHash(...)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:612
+pkg.berachain.dev/polaris/eth/rpc.(*backend).BlockByHash(0x4003c37bc0, {0x4001f660f0?, 0x400151d4a8?}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...})
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:254 +0x48
+github.com/ethereum/go-ethereum/ethapi.(*BlockChainAPI).GetBlockByHash(0x4001747750, {0x3766598, 0x4001f660f0}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...}, ...)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:782 +0x4c
+reflect.Value.call({0x4000cd3260?, 0x4000eafcf0?, 0xffff75077078?}, {0x2a725ef, 0x4}, {0x4001f5b680, 0x4, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4000cd3260?, 0x4000eafcf0?, 0x2?}, {0x4001f5b680?, 0x10?, 0x4001573b23?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c65500, {0x3766598?, 0x4001f660f0}, {0x400285dde8, 0x12}, {0x4001b01bf0, 0x2, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4003689180?, {0x3766598?, 0x4001f660f0?}, 0x4003b33180, 0x2?, {0x4001b01bf0?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfdb90, 0x4001b01b60, 0x4003b33180)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfdb90, 0x4001f660f0?, 0x4003b33180)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b01b60)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByHash [36mduration=[0m0.147167 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 355 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001f07000})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f08700, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f08700?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f08700?, 0xc09eb9970538e865?, 0xfed4ed92c5e44b69?}, 0x1c104e0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f08700?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f08700, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x40004895d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f08700, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4002014de0?, {0x4000489580?, 0x4001b50758?}, {0x4001f08700?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4002014c00)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4002014c00?, {0x3766598?, 0x4001f66730?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4001f66730}, {0xffff74f48f00, 0x4003c37bc0}, 0x4002014c00)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4001f66730}, {0x4001cd2840, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74fee9d0?}, {0x2a725ef, 0x4}, {0x4001f66780, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4001f66780?, 0x0?, 0x4002658180?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4001f66730}, {0x400103a060, 0x16}, {0x4002658168, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb9760?, {0x3766598?, 0x4001f66730?}, 0x4003b33420, 0x1?, {0x4002658168?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003cfd950, 0x4001c10360, 0x4003b33420)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003cfd950, 0x4001f66730?, 0x4003b33420)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001c10360)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.278208 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.StateAndHeaderByNumberOrHash [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [32mINF[0m Served eth_getCode [36mduration=[0m0.087 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 361 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001f07640})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f08a80, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f08a80?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f08a80?, 0x486b1fe01011674e?, 0x503954bae55e6f44?}, 0x1c10c90?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f08a80?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f08a80, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x4000489853?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f08a80, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4002015b00?, {0x4000489800?, 0x4001b50758?}, {0x4001f08a80?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4002015920)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400151d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4002015920?, {0x3766598?, 0x4001f66b40?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4001f66b40}, {0xffff74f48f00, 0x4003c37bc0}, 0x4002015920)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4001f66b40}, {0x4001cd2d10, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74fee9d0?}, {0x2a725ef, 0x4}, {0x4001f66b90, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4001f66b90?, 0x0?, 0x4002659230?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4001f66b40}, {0x400103a540, 0x16}, {0x40026591a0, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb98c0?, {0x3766598?, 0x4001f66b40?}, 0x4003b336c0, 0x1?, {0x40026591a0?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003dfcab0, 0x4001c10b10, 0x4003b336c0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003dfcab0, 0x4001f66b40?, 0x4003b336c0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001c10b10)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.582958 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 362 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001f07b80})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f08e00, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f08e00?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f08e00?, 0x822a2d75f7782015?, 0x7c489a23d1b72446?}, 0x1c10ff0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f08e00?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f08e00, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x40004899d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f08e00, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x400206c060?, {0x4000489980?, 0x4001b50758?}, {0x4001f08e00?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4002015e60)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4002453098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4002015e60?, {0x3766598?, 0x4001f66cd0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4001f66cd0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4002015e60)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4001f66cd0}, {0x4001cd2f20, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74fee9d0?}, {0x2a725ef, 0x4}, {0x4001f66d20, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4001f66d20?, 0x0?, 0x40024120c0?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4001f66cd0}, {0x400103a7c8, 0x16}, {0x4002412078, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb9a20?, {0x3766598?, 0x4001f66cd0?}, 0x4003b33810, 0x1?, {0x4002412078?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003dfc630, 0x4001c10e70, 0x4003b33810)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003dfc630, 0x4001f66cd0?, 0x4003b33810)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001c10e70)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.311875 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mnumber=[0mlatest
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mduration=[0m0.0525 [36merr=[0m"block not found: BlockByNumber [-1]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mduration=[0m0.083833 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_getBlockByHash crashed: runtime error: invalid memory address or nil pointer dereference
+goroutine 375 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x26315e0, 0x4eb33e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/types.Context.KVStore({{0x0, 0x0}, {0x0, 0x0}, {{0x0, 0x0}, {0x0, 0x0}, 0x0, {0x0, ...}, ...}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/types/context.go:289 +0x28
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical.(*plugin).GetBlockByHash(0x4003d94700, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/historical/historical_data.go:144 +0x70
+pkg.berachain.dev/polaris/eth/core.(*blockchain).GetBlockByHash(0x4003d94a80, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, 0x56, 0xcf, ...})
+	pkg.berachain.dev/polaris/eth/core/chain_reader.go:219 +0x1dc
+pkg.berachain.dev/polaris/eth/rpc.(*backend).polarisBlockByHash(...)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:612
+pkg.berachain.dev/polaris/eth/rpc.(*backend).BlockByHash(0x4003c37bc0, {0x4004b27540?, 0x4001ca74a8?}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...})
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:254 +0x48
+github.com/ethereum/go-ethereum/ethapi.(*BlockChainAPI).GetBlockByHash(0x4001747750, {0x3766598, 0x4004b27540}, {0xf2, 0x45, 0x84, 0xae, 0xa2, 0xf7, 0x56, ...}, ...)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:782 +0x4c
+reflect.Value.call({0x4000cd3260?, 0x4000eafcf0?, 0xffff74f434c8?}, {0x2a725ef, 0x4}, {0x4001dfb380, 0x4, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4000cd3260?, 0x4000eafcf0?, 0x2?}, {0x4001dfb380?, 0x10?, 0x4000604203?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c65500, {0x3766598?, 0x4004b27540}, {0x40027a7890, 0x12}, {0x4001b62750, 0x2, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001e1e820?, {0x3766598?, 0x4004b27540?}, 0x4000da8070, 0x2?, {0x4001b62750?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003ce3560, 0x4001b626c0, 0x4000da8070)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003ce3560, 0x4004b27540?, 0x4000da8070)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b626c0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByHash [36mduration=[0m0.090125 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 376 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001fb0560})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001fb4000, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001fb4000?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001fb4000?, 0xff8075a2d95381a9?, 0xb906a30f6b41cd03?}, 0x1b62a80?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001fb4000?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001fb4000, 0x1a6, 0x1a6}, 0xffff7536d7c8?, {0x1?, {0x0?, 0x4156dc?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001fb4000, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001b546c8?, {0x41a070?, 0x503cb40?}, {0x4001fb4000?, 0xffff7536d7c8?, 0x31?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001dfb680)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4002451098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001dfb680?, {0x3766598?, 0x4004b275e0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004b275e0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001dfb680)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004b275e0}, {0x4004b28790, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff75011590?}, {0x2a725ef, 0x4}, {0x4004b27630, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4004b27630?, 0x0?, 0x400000f9f8?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4004b275e0}, {0x40027a79e0, 0x16}, {0x400000f980, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e580?, {0x3766598?, 0x4004b275e0?}, 0x4000da8230, 0x1?, {0x400000f980?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003d7c750, 0x4001b62900, 0x4000da8230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003d7c750, 0x4004b275e0?, 0x4000da8230)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b62900)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.324208 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 377 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001fb09e0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001fb4380, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001fb4380?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001fb4380?, 0xf6a710caf8ce7844?, 0xa31e1085841f03cc?}, 0x1b62de0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001fb4380?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001fb4380, 0x1a6, 0x1a6}, 0x4001b545f8?, {0x36a8?, {0x0?, 0x4002c366d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001fb4380, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001dfbce0?, {0x4002c36680?, 0x4001b54758?}, {0x4001fb4380?, 0x4001b546f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001dfbb00)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400244f098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001dfbb00?, {0x3766598?, 0x4004b27770?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004b27770}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001dfbb00)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004b27770}, {0x4004b289a0, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff75011590?}, {0x2a725ef, 0x4}, {0x4004b277c0, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4004b277c0?, 0x0?, 0x40006d6240?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4004b27770}, {0x40027a7b48, 0x16}, {0x40006d6228, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e6e0?, {0x3766598?, 0x4004b27770?}, 0x4000da8380, 0x1?, {0x40006d6228?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003d7cb40, 0x4001b62c60, 0x4000da8380)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003d7cb40, 0x4004b27770?, 0x4000da8380)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b62c60)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.259042 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 368 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001fdc180})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001f09180, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001f09180?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001f09180?, 0x1dfc9905f73e62af?, 0x8a314e435e96fae2?}, 0x1c11740?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001f09180?, 0x4001b504e8?, 0x40c504?}, 0x1b504f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001f09180, 0x1a6, 0x1a6}, 0x4001b505f8?, {0x36a8?, {0x0?, 0x4000489ad3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001f09180, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x400206c900?, {0x4000489a80?, 0x4001b50758?}, {0x4001f09180?, 0x4001b506f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x400206c720)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4002453098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x400206c720?, {0x3766598?, 0x4001f67040?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4001f67040}, {0xffff74f48f00, 0x4003c37bc0}, 0x400206c720)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4001f67040}, {0x4001cd3130, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74fee9d0?}, {0x2a725ef, 0x4}, {0x4001f67090, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4001f67090?, 0x0?, 0x4002413530?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4001f67040}, {0x400103aeb8, 0x16}, {0x4002413500, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001cb9b80?, {0x3766598?, 0x4001f67040?}, 0x4003b33ab0, 0x1?, {0x4002413500?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004ab0240, 0x4001c115c0, 0x4003b33ab0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004ab0240, 0x4001f67040?, 0x4003b33ab0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001c115c0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.653875 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.SyncProgress [36mmodule=[0mpolaris-geth [36msync_progress=[0m"not implemented"
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 378 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001fb0f20})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001fb4700, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001fb4700?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001fb4700?, 0x41af7547cc530d8d?, 0xbd89dfefb7e0115d?}, 0x1b63140?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001fb4700?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001fb4700, 0x1a6, 0x1a6}, 0x4001b545f8?, {0x36a8?, {0x0?, 0x4002c367d3?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001fb4700, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4002454240?, {0x4002c36780?, 0x4001b54758?}, {0x4001fb4700?, 0x4001b546f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4002454060)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400244f098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4002454060?, {0x3766598?, 0x4004b27900?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4004b27900}, {0xffff74f48f00, 0x4003c37bc0}, 0x4002454060)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4004b27900}, {0x4004b28bb0, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff75011590?}, {0x2a725ef, 0x4}, {0x4004b27950, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4004b27950?, 0x0?, 0x40006d66d8?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4004b27900}, {0x40027a7ce0, 0x16}, {0x40006d66c0, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e840?, {0x3766598?, 0x4004b27900?}, 0x4000da84d0, 0x1?, {0x40006d66c0?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004ac8bd0, 0x4001b62fc0, 0x4000da84d0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004ac8bd0, 0x4004b27900?, 0x4000da84d0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b62fc0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.449375 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.StateAndHeaderByNumberOrHash [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mnumber=[0mpending
+[90m5:25PM[0m [32mINF[0m Served eth_call [36mduration=[0m0.1185 [36merr=[0m"block not found" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 437 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4001fb1700})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x4001fb4c40, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x4001fb4c40?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x4001fb4c40?, 0x130d708be114f77e?, 0x327f286d286e6169?}, 0x576360?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x4001fb4c40?, 0x4001b544e8?, 0x40c504?}, 0x1b544f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x4001fb4c40, 0x1a6, 0x1a6}, 0x4001b545f8?, {0x36a8?, {0x0?, 0x4002c36953?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x4001fb4c40, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4002454de0?, {0x4002c36900?, 0x4001b54758?}, {0x4001fb4c40?, 0x4001b546f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4002454c00)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001ca7098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4002454c00?, {0x3766598?, 0x400250a0a0?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x400250a0a0}, {0xffff74f48f00, 0x4003c37bc0}, 0x4002454c00)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x400250a0a0}, {0x4004b28e70, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff74f368f8?}, {0x2a725ef, 0x4}, {0x400250a0f0, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x400250a0f0?, 0x0?, 0x40006d7428?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x400250a0a0}, {0x40027a7f50, 0x16}, {0x40006d73f8, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7e9a0?, {0x3766598?, 0x400250a0a0?}, 0x4000da8850, 0x1?, {0x40006d73f8?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4003d7ddd0, 0x4001b63e90, 0x4000da8850)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4003d7ddd0, 0x400250a0a0?, 0x4000da8850)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001b63e90)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m1.01575 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 296 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4003aff1c0})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400467c8c0, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400467c8c0?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400467c8c0?, 0xcf15889e1d4c4e27?, 0x44f4c55cdddaa2fa?}, 0x1a877a0?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400467c8c0?, 0x4001d744e8?, 0x40c504?}, 0x1d744f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400467c8c0, 0x1a6, 0x1a6}, 0x4001d745f8?, {0x36a8?, {0x0?, 0x4001d08653?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400467c8c0, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001d0f0e0?, {0x4001d08600?, 0x4001d74758?}, {0x400467c8c0?, 0x4001d746f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001d0ef00)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x4001d6d098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001d0ef00?, {0x3766598?, 0x4003de5180?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003de5180}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001d0ef00)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003de5180}, {0x4001d7e420, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff7500a3d8?}, {0x2a725ef, 0x4}, {0x4003de51d0, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4003de51d0?, 0x0?, 0x4003694ea0?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4003de5180}, {0x4003accc90, 0x16}, {0x4003694e88, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4001d022c0?, {0x3766598?, 0x4003de5180?}, 0x40020783f0, 0x1?, {0x4003694e88?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004ac8870, 0x4001a87620, 0x40020783f0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004ac8870, 0x4003de5180?, 0x40020783f0)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a87620)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.728625 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m2
+[90m5:25PM[0m [1m[31mERR[0m[0m RPC method eth_sendRawTransaction crashed: consensus key is nil: collections: not found: key 'no_key' of type gogoproto/tendermint.types.ConsensusParams
+goroutine 297 [running]:
+github.com/ethereum/go-ethereum/rpc.(*callback).call.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:199 +0x74
+panic({0x263dba0, 0x4003aff600})
+	runtime/panic.go:884 +0x1f4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).GetConsensusParams(_, {{0x37665d0, 0x40001ae000}, {0x377dea0, 0x4003dc9e40}, {{0x0, 0x0}, {0x4003dd9ba0, 0xc}, 0x0, ...}, ...})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:446 +0xc4
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).getContextForTx(_, _, {_, _, _})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:579 +0x12c
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).runTx(0x400012d200, 0x0, {0x400467cc40, 0x1a6, 0x1a6})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/baseapp.go:624 +0x70
+github.com/cosmos/cosmos-sdk/baseapp.(*BaseApp).CheckTx(0x400012d200, {{0x400467cc40?, 0x40?, 0x40?}, 0x4f2c160?})
+	github.com/cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:391 +0x78
+github.com/cometbft/cometbft/abci/client.(*localClient).CheckTxAsync(0x4003df8d20, {{0x400467cc40?, 0xcc9c9820ce379ce?, 0xae5266fd638483c1?}, 0x1a87a10?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/abci/client/local_client.go:93 +0xf4
+github.com/cometbft/cometbft/proxy.(*appConnMempool).CheckTxAsync(0x4003deb518, {{0x400467cc40?, 0x4001d744e8?, 0x40c504?}, 0x1d744f8?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/proxy/app_conn.go:154 +0xf8
+github.com/cometbft/cometbft/mempool/v0.(*CListMempool).CheckTx(0x4003229740, {0x400467cc40, 0x1a6, 0x1a6}, 0x4001d745f8?, {0x36a8?, {0x0?, 0x4001d08753?}})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/mempool/v0/clist_mempool.go:254 +0x260
+github.com/cometbft/cometbft/rpc/core.BroadcastTxSync(0x400206e960, {0x400467cc40, 0x1a6, 0x1a6})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/core/mempool.go:35 +0xc8
+github.com/cometbft/cometbft/rpc/client/local.(*Local).BroadcastTxSync(0x4001d0f4a0?, {0x4001d08700?, 0x4001d74758?}, {0x400467cc40?, 0x4001d746f8?, 0x59?})
+	github.com/cometbft/cometbft@v0.37.1-0.20230411132551-3a91d155e664/rpc/client/local/local.go:99 +0x30
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTxSync({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:94 +0xc4
+github.com/cosmos/cosmos-sdk/client.Context.BroadcastTx({{0x0, 0x0, 0x0}, {0x37841b0, 0x400206e940}, 0x4001a69180, {0x4004c04a80, 0xc}, {0x379b608, 0x400138f8a8}, ...}, ...)
+	github.com/cosmos/cosmos-sdk@v0.48.0/client/broadcast.go:26 +0x68
+pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool.(*plugin).SendTx(0x4001a78280, 0x4001d0f2c0)
+	pkg.berachain.dev/polaris/cosmos/x/evm/plugins/txpool/plugin.go:94 +0x140
+pkg.berachain.dev/polaris/eth/core.(*blockchain).SendTx(0x400244f098?, {0x2218ff8?, 0x7?}, 0xfffffff8?)
+	pkg.berachain.dev/polaris/eth/core/chain_writer.go:179 +0x2c
+pkg.berachain.dev/polaris/eth/rpc.(*backend).SendTx(0x4001d0f2c0?, {0x3766598?, 0x4003de5360?}, 0x40df10?)
+	pkg.berachain.dev/polaris/eth/rpc/backend.go:433 +0x30
+github.com/ethereum/go-ethereum/ethapi.SubmitTransaction({0x3766598, 0x4003de5360}, {0xffff74f48f00, 0x4003c37bc0}, 0x4001d0f2c0)
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1703 +0xc8
+github.com/ethereum/go-ethereum/ethapi.(*TransactionAPI).SendRawTransaction(0x4000dea960, {0x3766598, 0x4003de5360}, {0x4001d7e630, 0xac, 0xac})
+	github.com/ethereum/go-ethereum@v1.11.4/ethapi/api.go:1778 +0x8c
+reflect.Value.call({0x4001c33560?, 0x4000eafdd0?, 0xffff7500a3d8?}, {0x2a725ef, 0x4}, {0x4003de53b0, 0x3, 0x1eff4dc?})
+	reflect/value.go:586 +0x838
+reflect.Value.Call({0x4001c33560?, 0x4000eafdd0?, 0x1?}, {0x4003de53b0?, 0x0?, 0x40036950c8?})
+	reflect/value.go:370 +0x90
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0x4001c683c0, {0x3766598?, 0x4003de5360}, {0x4001d321e0, 0x16}, {0x40036950b0, 0x1, 0x1ef8b98?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/service.go:205 +0x34c
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0x4004c7eb00?, {0x3766598?, 0x4003de5360?}, 0x4000da8a10, 0x1?, {0x40036950b0?, 0x0?, 0x0?})
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:513 +0x40
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0x4004ac8630, 0x4001a87860, 0x4000da8a10)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:459 +0x1d4
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0x4004ac8630, 0x4003de5360?, 0x4000da8a10)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:420 +0x1d0
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1(0x4001a87860)
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:256 +0x174
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:348 +0xbc
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc
+	github.com/ethereum/go-ethereum@v1.11.4/rpc/handler.go:344 +0x88
+ [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m Served eth_sendRawTransaction [36mduration=[0m0.460209 [36merr=[0m"method handler crashed" [36mmodule=[0mpolaris-geth [36mreqid=[0m2
+[90m5:25PM[0m [1m[31mERR[0m[0m eth.rpc.backend.BlockByNumber [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context" [36mmodule=[0mpolaris-geth [36mnumber=[0mearliest
+[90m5:25PM[0m [32mINF[0m Served eth_getBlockByNumber [36mduration=[0m0.098667 [36merr=[0m"PolarisBaseApp is not ready; please wait for first block: invalid height [cosmos/cosmos-sdk@v0.48.0/baseapp/abci.go:789]: GetHeader: failed to use query context: BlockByNumber [0]" [36mmodule=[0mpolaris-geth [36mreqid=[0m1
+[90m5:25PM[0m [32mINF[0m Timed out [36mdur=[0m4997.052125 [36mheight=[0m1 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m5:25PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"296152B1069C27BA7E32C3D56EFD8C8867FDCD26860DA73EC6F689B62D02EE56","parts":{"hash":"6D27FD8B1B590B412AC263551EB58403E343272535FED4549706DDCE9E5241D5","total":1}},"height":1,"pol_round":-1,"round":0,"signature":"l+VIExDYuzJO+HSTa6+ycAOlpBzDzf++bRdEsW0VMNx8m7Dvc4DGsvY2hWRSyrhZE1v9G18hvt9Vvo1lFLlaDQ==","timestamp":"2023-05-18T17:25:51.65410201Z"}
+[90m5:25PM[0m [32mINF[0m received complete proposal block [36mhash=[0m296152B1069C27BA7E32C3D56EFD8C8867FDCD26860DA73EC6F689B62D02EE56 [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m5:25PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m{} [36mheight=[0m1 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+[90m5:25PM[0m [32mINF[0m Preparing block [36mcoinbase=[0m0x0dbb19B171276989728120aaFDc5CCD2A954a0a0 [36mheight=[0m1 [36mmodule=[0mpolaris-geth [36mtimestamp=[0m1684430742
+[90m5:25PM[0m [32mINF[0m executed block [36mheight=[0m1 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m5:25PM[0m [32mINF[0m Finalizing block [36mblock=[0m0x1e975493e7747964193a69cd5f908fc2a5a4f6ea7f46742de99c3bad28d1bbd6 [36mmodule=[0mpolaris-geth [36mnum txs=[0m0
+[90m5:25PM[0m [32mINF[0m BlockByHash [36mblock=[0m{"ReceivedAt":"0001-01-01T00:00:00Z","ReceivedFrom":null} [36mhash=[0m0x1e975493e7747964193a69cd5f908fc2a5a4f6ea7f46742de99c3bad28d1bbd6 [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.BlockByHash [36mheader=[0m{"baseFeePerGas":"0x3b9aca00","difficulty":"0x0","extraData":"0x","gasLimit":"0x1c9c380","gasUsed":"0x0","hash":"0x1e975493e7747964193a69cd5f908fc2a5a4f6ea7f46742de99c3bad28d1bbd6","logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","miner":"0x0dbb19b171276989728120aafdc5ccd2a954a0a0","mixHash":"0x0000000000000000000000000000000000000000000000000000000000000000","nonce":"0x0000000000000000","number":"0x1","parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000","receiptsRoot":"0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421","sha3Uncles":"0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347","stateRoot":"0x0000000000000000000000000000000000000000000000000000000000000000","timestamp":"0x64665f96","transactionsRoot":"0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421","withdrawalsRoot":null} [36mmodule=[0mpolaris-geth [36mnum_txs=[0m0
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.ChainConfig [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m called eth.rpc.backend.GetTd [36mhash=[0m0x1e975493e7747964193a69cd5f908fc2a5a4f6ea7f46742de99c3bad28d1bbd6 [36mmodule=[0mpolaris-geth
+[90m5:25PM[0m [32mINF[0m commit synced [36mcommit=[0m436F6D6D697449447B5B32323120313430203230203138203230372032353420363620313732203231372038352032203137372031333920313539203133302032323120373520313939203135362034302032323320313632203230302032313520323236203136372038352032303420313338203537203230392035375D3A317D [36mmodule=[0mserver
+[90m5:25PM[0m [32mINF[0m committed state [36mapp_hash=[0mDD8C1412CFFE42ACD95502B18B9F82DD4BC79C28DFA2C8D7E2A755CC8A39D139 [36mheight=[0m1 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m5:25PM[0m [32mINF[0m indexed block exents [36mheight=[0m1 [36mmodule=[0mtxindex
