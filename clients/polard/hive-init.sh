@@ -19,7 +19,6 @@
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND
 # TITLE.
 
-
 KEYS[0]="dev0"
 KEYS[1]="dev1"
 KEYS[2]="dev2"
@@ -63,6 +62,17 @@ for KEY in "${KEYS[@]}"; do
     polard keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO --home "$HOMEDIR"
 done
 
+ETH_GENESIS_SOURCE=/genesis.json
+# Change eth_genesis in config/genesis.json
+ETH_GENESIS=$(jq -c '.' "$ETH_GENESIS_SOURCE")
+echo "eth_gen dump: "
+echo $ETH_GENESIS
+# jq --arg eg "$ETH_GENESIS" '.app_state["evm"]["params"]["eth_genesis"]=$eg' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+# Dump genesis
+echo "Supplied genesis state:"
+cat $GENESIS
+
 # Change parameter token denominations to abera
 jq '.app_state["staking"]["params"]["bond_denom"]="abera"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["crisis"]["constant_fee"]["denom"]="abera"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
@@ -70,6 +80,10 @@ jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="abera"' "$GE
 jq '.app_state["evm"]["params"]["evm_denom"]="abera"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["mint"]["params"]["mint_denom"]="abera"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.consensus["params"]["block"]["max_gas"]="30000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+
+echo "post-genesis state:"
+cat $GENESIS
 
 # Allocate genesis accounts (cosmos formatted addresses)
 for KEY in "${KEYS[@]}"; do
