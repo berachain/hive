@@ -240,7 +240,7 @@ func (b *Builder) buildImage(ctx context.Context, contextDir, dockerFile, branch
 	}
 
 	opts := b.buildConfig(ctx, imageTag)
-	fmt.Println("BUILD OPTS")
+	fmt.Println("BUILD OPTS", opts)
 	opts.ContextDir = context
 	opts.Dockerfile = dockerFile
 	logctx := []interface{}{"dir", contextDir, "nocache", opts.NoCache, "pull", opts.Pull}
