@@ -117,6 +117,7 @@ func (b *Builder) buildConfig(ctx context.Context, name string) docker.BuildImag
 		OutputStream: io.Discard,
 		NoCache:      nocache,
 		Pull:         b.config.PullEnabled,
+		Platform:     b.config.Platform,
 	}
 	if b.authenticator != nil {
 		opts.AuthConfigs = b.authenticator.AuthConfigs()
@@ -239,6 +240,7 @@ func (b *Builder) buildImage(ctx context.Context, contextDir, dockerFile, branch
 	}
 
 	opts := b.buildConfig(ctx, imageTag)
+	fmt.Println("BUILD OPTS")
 	opts.ContextDir = context
 	opts.Dockerfile = dockerFile
 	logctx := []interface{}{"dir", contextDir, "nocache", opts.NoCache, "pull", opts.Pull}
