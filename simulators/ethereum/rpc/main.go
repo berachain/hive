@@ -132,7 +132,7 @@ func runLESTests(t *hivesim.T, serverNode *hivesim.Client) {
 	// Configure LES client.
 	clientParams := clientEnv.Set("HIVE_NODETYPE", "light")
 	// Disable mining.
-	clientParams = clientParams.Set("HIVE_MINER", "")
+	clientParams = clientParams.Setsim("HIVE_MINER", "")
 	clientParams = clientParams.Set("HIVE_CLIQUE_PRIVATEKEY", "")
 
 	enode, err := serverNode.EnodeURL()

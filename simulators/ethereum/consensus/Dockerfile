@@ -18,4 +18,7 @@ COPY --from=builder /source/consensus .
 COPY --from=builder /tests /tests
 ENV TESTPATH /tests
 
+
+RUN uname -a
+
 ENTRYPOINT ["./consensus"]
