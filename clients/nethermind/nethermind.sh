@@ -57,12 +57,12 @@ fi
 
 # Generate the genesis and chainspec file.
 mkdir -p /chainspec
+echo "Supplied genesis state:" 
 jq -f /mapper.jq /genesis.json > /chainspec/test.json
 jq . /chainspec/test.json
 
 # Generate the config file.
 mkdir /configs
-echo "Supplied genesis state:" 
 jq -n -f /mkconfig.jq > /configs/test.cfg
 
 echo "test.cfg"
@@ -89,4 +89,4 @@ if [ "$HIVE_LOGLEVEL" != "" ]; then
 fi
 echo "Running Nethermind..."
 # The output is tee:d, via /log.txt, because the enode script uses that logfile to parse out the enode id
-dotnet /nethermind/Nethermind.Runner.dll --config /configs/test.cfg $LOG_FLAG 2>&1 | tee /log.txt
+dotnet /nethermind/nethermind.dll --config /configs/test.cfg $LOG_FLAG 2>&1 | tee /log.txt

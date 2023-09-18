@@ -1,6 +1,9 @@
 package globals
 
 import (
+	"crypto/ecdsa"
+	"crypto/sha256"
+	"encoding/binary"
 	"math/big"
 	"time"
 
@@ -10,14 +13,38 @@ import (
 	"github.com/ethereum/hive/hivesim"
 )
 
+type TestAccount struct {
+	key     *ecdsa.PrivateKey
+	address *common.Address
+	index   uint64
+}
+
+func (a *TestAccount) GetKey() *ecdsa.PrivateKey {
+	return a.key
+}
+
+func (a *TestAccount) GetAddress() common.Address {
+	if a.address == nil {
+		key := a.key
+		addr := crypto.PubkeyToAddress(key.PublicKey)
+		a.address = &addr
+	}
+	return *a.address
+}
+
+func (a *TestAccount) GetIndex() uint64 {
+	return a.index
+}
+
 var (
 
 	// Test chain parameters
 	ChainID          = big.NewInt(7)
 	GasPrice         = big.NewInt(30 * params.GWei)
 	GasTipPrice      = big.NewInt(1 * params.GWei)
+	BlobGasPrice     = big.NewInt(1 * params.GWei)
 	NetworkID        = big.NewInt(7)
-	GenesisTimestamp = int64(0x1234)
+	GenesisTimestamp = uint64(0x1234)
 
 	// RPC Timeout for every call
 	RPCTimeout = 10 * time.Second
@@ -30,9 +57,9 @@ var (
 	DefaultJwtTokenSecretBytes = []byte("secretsecretsecretsecretsecretse") // secretsecretsecretsecretsecretse
 	MaxTimeDriftSeconds        = int64(60)
 
-	// This is the account that sends vault funding transactions.
-	VaultAccountAddress = common.HexToAddress("0xcf49fda3be353c69b41ed96333cd24302da4556f")
-	VaultKey, _         = crypto.HexToECDSA("63b508a03c3b5937ceb903af8b1b0c191012ef6eb7e9c3fb7afa94e5d214d376")
+	// Accounts used for testing
+	TestAccountCount = uint64(1000)
+	TestAccounts     []*TestAccount
 
 	// Global test case timeout
 	DefaultTestCaseTimeout = time.Second * 60
@@ -69,3 +96,18 @@ var (
 		"HIVE_MERGE_BLOCK_ID": "100",
 	}
 )
+
+func init() {
+	// Fill the test accounts with deterministic addresses
+	TestAccounts = make([]*TestAccount, TestAccountCount)
+	for i := uint64(0); i < TestAccountCount; i++ {
+		bs := make([]byte, 8)
+		binary.BigEndian.PutUint64(bs, uint64(i))
+		b := sha256.Sum256(bs)
+		k, err := crypto.ToECDSA(b[:])
+		if err != nil {
+			panic(err)
+		}
+		TestAccounts[i] = &TestAccount{key: k, index: i}
+	}
+}

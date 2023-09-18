@@ -113,7 +113,7 @@ fi
 if [ "$HIVE_MINER_EXTRA" != "" ]; then
     FLAGS="$FLAGS --miner-extra-data=$HIVE_MINER_EXTRA"
 fi
-FLAGS="$FLAGS --min-gas-price=1 --tx-pool-price-bump=0 --tx-pool-limit-by-account-percentage=1"
+FLAGS="$FLAGS --min-gas-price=1 --tx-pool-price-bump=0"
 
 # Configure peer-to-peer networking.
 if [ "$HIVE_BOOTNODE" != "" ]; then
@@ -151,6 +151,11 @@ RPCFLAGS="$RPCFLAGS --rpc-ws-enabled --rpc-ws-api=DEBUG,ETH,NET,WEB3,ADMIN --rpc
 if [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" != "" ]; then
     echo "0x7365637265747365637265747365637265747365637265747365637265747365" > /jwtsecret
     RPCFLAGS="$RPCFLAGS --engine-host-allowlist=* --engine-jwt-enabled --engine-jwt-secret /jwtsecret"
+fi
+
+# Enable KZG trusted setup if cancun timestamp is set, needed for custom genesis on Besu wtih Cancun
+if [ "$HIVE_CANCUN_TIMESTAMP" != "" ]; then
+    FLAGS="$FLAGS --kzg-trusted-setup=/trusted_setup.txt"
 fi
 
 # Start Besu.

@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"math/big"
 
 	api "github.com/ethereum/go-ethereum/beacon/engine"
@@ -11,7 +10,8 @@ import (
 	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
+
+	typ "github.com/ethereum/hive/simulators/ethereum/engine/types"
 )
 
 type testcase struct {
@@ -23,8 +23,8 @@ type testcase struct {
 	// test fixture data
 	fixture   fixtureTest
 	genesis   *core.Genesis
-	payloads  []*api.ExecutableData
 	postAlloc *core.GenesisAlloc
+	payloads  []*engineNewPayload
 }
 
 type fixtureTest struct {
@@ -49,25 +49,29 @@ type fixtureJSON struct {
 }
 
 type block struct {
-	Rlp          string        `json:"rlp"`
-	BlockHeader  *blockHeader  `json:"blockHeader"`
-	Transactions []transaction `json:"transactions"`
-	UncleHeaders []byte        `json:"uncleHeaders"`
-	Withdrawals  []withdrawals `json:"withdrawals"`
-	Exception    string        `json:"expectException"`
+	Rlp              string            `json:"rlp"`
+	BlockHeader      *blockHeader      `json:"blockHeader"`
+	Transactions     []transaction     `json:"transactions"`
+	UncleHeaders     []byte            `json:"uncleHeaders"`
+	Withdrawals      []withdrawals     `json:"withdrawals"`
+	Exception        string            `json:"expectException"`
+	EngineNewPayload *engineNewPayload `json:"engineNewPayload"`
 }
 
 //go:generate go run github.com/fjl/gencodec -type blockHeader -field-override blockHeaderUnmarshaling -out gen_bh.go
+//go:generate go run github.com/fjl/gencodec -type transaction -field-override transactionUnmarshaling -out gen_txs.go
+//go:generate go run github.com/fjl/gencodec -type withdrawals -field-override withdrawalsUnmarshaling -out gen_wds.go
+//go:generate go run github.com/fjl/gencodec -type engineNewPayload -field-override engineNewPayloadUnmarshaling -out gen_enp.go
 type blockHeader struct {
 	ParentHash         common.Hash      `json:"parentHash"`
 	UncleHash          common.Hash      `json:"sha3Uncles"`
 	UncleHashAlt       common.Hash      `json:"uncleHash"` // name in fixtures
 	Coinbase           common.Address   `json:"coinbase"`
-	CoinbaseAlt        common.Address   `json:"author"` // nethermind/parity/oe name
+	CoinbaseAlt        common.Address   `json:"author"` // nethermind name
 	CoinbaseAlt2       common.Address   `json:"miner"`  // geth/besu name
 	StateRoot          common.Hash      `json:"stateRoot"`
-	transactionTrie    common.Hash      `json:"transactionRoot"`
-	transactionTrieAlt common.Hash      `json:"transactionTrie"` // name in fixtures
+	TransactionTrie    common.Hash      `json:"transactionRoot"`
+	TransactionTrieAlt common.Hash      `json:"transactionTrie"` // name in fixtures
 	ReceiptTrie        common.Hash      `json:"receiptsRoot"`
 	ReceiptTrieAlt     common.Hash      `json:"receiptTrie"` // name in fixtures
 	Bloom              types.Bloom      `json:"bloom"`
@@ -82,19 +86,23 @@ type blockHeader struct {
 	BaseFee            *big.Int         `json:"baseFeePerGas"`
 	Hash               common.Hash      `json:"hash"`
 	WithdrawalsRoot    common.Hash      `json:"withdrawalsRoot"`
+	BlobGasUsed        *uint64          `json:"blobGasUsed"`
+	ExcessBlobGas      *uint64          `json:"excessBlobGas"`
+	BeaconRoot         *common.Hash     `json:"parentBeaconBlockRoot"`
 }
 
 type blockHeaderUnmarshaling struct {
-	Difficulty *math.HexOrDecimal256 `json:"difficulty"`
-	Number     *math.HexOrDecimal256 `json:"number"`
-	GasLimit   math.HexOrDecimal64   `json:"gasLimit"`
-	GasUsed    math.HexOrDecimal64   `json:"gasUsed"`
-	Timestamp  *math.HexOrDecimal256 `json:"timestamp"`
-	ExtraData  hexutil.Bytes         `json:"extraData"`
-	BaseFee    *math.HexOrDecimal256 `json:"baseFeePerGas"`
+	Difficulty    *math.HexOrDecimal256 `json:"difficulty"`
+	Number        *math.HexOrDecimal256 `json:"number"`
+	GasLimit      math.HexOrDecimal64   `json:"gasLimit"`
+	GasUsed       math.HexOrDecimal64   `json:"gasUsed"`
+	Timestamp     *math.HexOrDecimal256 `json:"timestamp"`
+	ExtraData     hexutil.Bytes         `json:"extraData"`
+	BaseFee       *math.HexOrDecimal256 `json:"baseFeePerGas"`
+	BlobGasUsed   *math.HexOrDecimal64  `json:"dataGasUsed"`
+	ExcessBlobGas *math.HexOrDecimal64  `json:"excessDataGas"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type transaction -field-override transactionUnmarshaling -out gen_txs.go
 type transaction struct {
 	Type                 *uint64           `json:"type"`
 	ChainId              *big.Int          `json:"chainId"`
@@ -112,6 +120,8 @@ type transaction struct {
 	V                    *big.Int          `json:"v"`
 	R                    *big.Int          `json:"r"`
 	S                    *big.Int          `json:"s"`
+	MaxFeePerDataGas     *big.Int          `json:"maxFeePerDataGas"`
+	BlobVersionedHashes  []*common.Hash    `json:"blobVersionedHashes"`
 }
 
 type transactionUnmarshaling struct {
@@ -127,9 +137,9 @@ type transactionUnmarshaling struct {
 	V                    *math.HexOrDecimal256 `json:"v"`
 	R                    *math.HexOrDecimal256 `json:"r"`
 	S                    *math.HexOrDecimal256 `json:"s"`
+	MaxFeePerDataGas     *math.HexOrDecimal256 `json:"maxFeePerDataGas"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type withdrawals -field-override withdrawalsUnmarshaling -out gen_wds.go
 type withdrawals struct {
 	Index          uint64         `json:"index"`
 	ValidatorIndex uint64         `json:"validatorIndex"`
@@ -143,55 +153,24 @@ type withdrawalsUnmarshaling struct {
 	Amount         math.HexOrDecimal64 `json:"amount"`
 }
 
-// extractFixtureFields extracts the genesis, payloads and post allocation
-// fields from the given fixture test and stores them in the testcase struct.
-func (tc *testcase) extractFixtureFields(fixture fixtureJSON) error {
-	// extract genesis fields from fixture test
-	tc.genesis = extractGenesis(fixture)
-
-	// extract payloads from each block
-	payloads := []*api.ExecutableData{}
-	for _, bl := range fixture.Blocks {
-		block, err := bl.decodeBlock()
-		if err != nil {
-			return fmt.Errorf("failed to decode block: %v", err)
-		}
-		payload := api.BlockToExecutableData(block, common.Big0).ExecutionPayload
-		payloads = append(payloads, payload)
-	}
-	tc.payloads = payloads
-
-	// extract post account information
-	tc.postAlloc = &fixture.Post
-	return nil
+type engineNewPayload struct {
+	Payload               *api.ExecutableData `json:"executionPayload"`
+	BlobVersionedHashes   []common.Hash       `json:"expectedBlobVersionedHashes"`
+	ParentBeaconBlockRoot *common.Hash        `json:"parentBeaconBlockRoot"`
+	Version               uint64              `json:"version"`
+	ErrorCode             int64               `json:"errorCode,string"`
 }
 
-// extractGenesis extracts the genesis block information from the given fixture
-// and returns a core.Genesis struct containing the extracted information.
-func extractGenesis(fixture fixtureJSON) *core.Genesis {
-	genesis := &core.Genesis{
-		Coinbase:   fixture.Genesis.Coinbase,
-		Difficulty: fixture.Genesis.Difficulty,
-		GasLimit:   fixture.Genesis.GasLimit,
-		Timestamp:  fixture.Genesis.Timestamp.Uint64(),
-		ExtraData:  fixture.Genesis.ExtraData,
-		Mixhash:    fixture.Genesis.MixHash,
-		Nonce:      fixture.Genesis.Nonce.Uint64(),
-		BaseFee:    fixture.Genesis.BaseFee,
-
-		Alloc: fixture.Pre,
-	}
-	return genesis
+type engineNewPayloadUnmarshaling struct {
+	Version math.HexOrDecimal64 `json:"version"`
 }
 
-// decodeBlock decodes the RLP-encoded block data in the block struct and
-// returns a types.Block struct containing the decoded information.
-func (bl *block) decodeBlock() (*types.Block, error) {
-	data, err := hexutil.Decode(bl.Rlp)
+func (p *engineNewPayload) ToExecutableData() (*typ.ExecutableData, error) {
+	ed, err := typ.FromBeaconExecutableData(p.Payload)
 	if err != nil {
 		return nil, err
 	}
-	var b types.Block
-	err = rlp.DecodeBytes(data, &b)
-	return &b, err
+	ed.VersionedHashes = &p.BlobVersionedHashes
+	ed.ParentBeaconBlockRoot = p.ParentBeaconBlockRoot
+	return &ed, nil
 }

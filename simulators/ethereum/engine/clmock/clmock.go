@@ -2,6 +2,8 @@ package clmock
 
 import (
 	"context"
+	"crypto/sha256"
+	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"math/big"
@@ -10,26 +12,33 @@ import (
 	"time"
 
 	api "github.com/ethereum/go-ethereum/beacon/engine"
+	"github.com/ethereum/go-ethereum/core"
+	"github.com/ethereum/go-ethereum/core/forkid"
 	"github.com/ethereum/hive/simulators/ethereum/engine/client"
-	client_types "github.com/ethereum/hive/simulators/ethereum/engine/client/types"
+	"github.com/ethereum/hive/simulators/ethereum/engine/config"
+	"github.com/ethereum/hive/simulators/ethereum/engine/config/cancun"
 	"github.com/ethereum/hive/simulators/ethereum/engine/globals"
 	"github.com/ethereum/hive/simulators/ethereum/engine/helper"
+	typ "github.com/ethereum/hive/simulators/ethereum/engine/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/hive/hivesim"
+	"github.com/pkg/errors"
 )
 
 var (
-	DefaultSlotsToSafe      = big.NewInt(1)
-	DefaultSlotsToFinalized = big.NewInt(2)
+	DefaultSafeSlotsToImportOptimistically = big.NewInt(0)
+	DefaultSlotsToSafe                     = big.NewInt(1)
+	DefaultSlotsToFinalized                = big.NewInt(2)
+	DefaultBlockTimestampIncrement         = big.NewInt(1)
 
 	// Time delay between ForkchoiceUpdated and GetPayload to allow the clients
 	// to produce a new Payload
 	DefaultPayloadProductionClientDelay = time.Second
 )
 
-type ExecutableDataHistory map[uint64]*api.ExecutableData
+type ExecutableDataHistory map[uint64]*typ.ExecutableData
 
 func (h ExecutableDataHistory) LatestPayloadNumber() uint64 {
 	latest := uint64(0)
@@ -78,78 +87,94 @@ type CLMocker struct {
 	NextPayloadID        *api.PayloadID
 	CurrentPayloadNumber uint64
 
+	// Chain History
+	HeaderHistory map[uint64]*types.Header
+
+	// Payload ID History
+	PayloadIDHistory map[api.PayloadID]interface{}
+
 	// PoS Chain History Information
 	PrevRandaoHistory      map[uint64]common.Hash
 	ExecutedPayloadHistory ExecutableDataHistory
 	HeadHashHistory        []common.Hash
 
 	// Latest broadcasted data using the PoS Engine API
-	LatestHeadNumber        *big.Int
-	LatestHeader            *types.Header
-	LatestPayloadBuilt      api.ExecutableData
-	LatestBlockValue        *big.Int
-	LatestPayloadAttributes api.PayloadAttributes
-	LatestExecutedPayload   api.ExecutableData
-	LatestForkchoice        api.ForkchoiceStateV1
+	LatestHeadNumber            *big.Int
+	LatestHeader                *types.Header
+	LatestPayloadBuilt          typ.ExecutableData
+	LatestBlockValue            *big.Int
+	LatestBlobBundle            *typ.BlobsBundle
+	LatestShouldOverrideBuilder *bool
+	LatestPayloadAttributes     typ.PayloadAttributes
+	LatestExecutedPayload       typ.ExecutableData
+	LatestForkchoice            api.ForkchoiceStateV1
 
 	// Merge related
 	FirstPoSBlockNumber             *big.Int
 	TTDReached                      bool
 	TransitionPayloadTimestamp      *big.Int
 	SafeSlotsToImportOptimistically *big.Int
+	ChainTotalDifficulty            *big.Int
 
-	// Shanghai Related
-	ShanghaiTimestamp *big.Int
-	NextWithdrawals   types.Withdrawals
+	// Fork configuration
+	*config.ForkConfig
+	Genesis *core.Genesis
+
+	NextWithdrawals types.Withdrawals
 
 	// Global context which all procedures shall stop
 	TestContext    context.Context
 	TimeoutContext context.Context
 }
 
-func isShanghai(blockTimestamp uint64, shanghaiTimestamp *big.Int) bool {
-	return shanghaiTimestamp != nil && big.NewInt(int64(blockTimestamp)).Cmp(shanghaiTimestamp) >= 0
-}
-
-func NewCLMocker(t *hivesim.T, slotsToSafe, slotsToFinalized, safeSlotsToImportOptimistically *big.Int, shanghaiTime *big.Int) *CLMocker {
+func NewCLMocker(t *hivesim.T, genesis *core.Genesis, forkConfig *config.ForkConfig) *CLMocker {
 	// Init random seed for different purposes
 	seed := time.Now().Unix()
 	t.Logf("Randomness seed: %v\n", seed)
 	rand.Seed(seed)
 
-	if slotsToSafe == nil {
-		// Use default
-		slotsToSafe = DefaultSlotsToSafe
-	}
-	if slotsToFinalized == nil {
-		// Use default
-		slotsToFinalized = DefaultSlotsToFinalized
-	}
 	// Create the new CL mocker
 	newCLMocker := &CLMocker{
-		T:                               t,
-		EngineClients:                   make([]client.EngineClient, 0),
-		PrevRandaoHistory:               map[uint64]common.Hash{},
-		ExecutedPayloadHistory:          ExecutableDataHistory{},
-		SlotsToSafe:                     slotsToSafe,
-		SlotsToFinalized:                slotsToFinalized,
-		SafeSlotsToImportOptimistically: safeSlotsToImportOptimistically,
+		T:                      t,
+		EngineClients:          make([]client.EngineClient, 0),
+		PrevRandaoHistory:      map[uint64]common.Hash{},
+		ExecutedPayloadHistory: ExecutableDataHistory{},
+
+		SlotsToSafe:                     DefaultSlotsToSafe,
+		SlotsToFinalized:                DefaultSlotsToFinalized,
+		SafeSlotsToImportOptimistically: DefaultSafeSlotsToImportOptimistically,
 		PayloadProductionClientDelay:    DefaultPayloadProductionClientDelay,
-		LatestHeader:                    nil,
-		FirstPoSBlockNumber:             nil,
-		LatestHeadNumber:                nil,
-		TTDReached:                      false,
-		NextFeeRecipient:                common.Address{},
+		BlockTimestampIncrement:         DefaultBlockTimestampIncrement,
+
+		PayloadIDHistory:    make(map[api.PayloadID]interface{}),
+		LatestHeader:        nil,
+		FirstPoSBlockNumber: nil,
+		LatestHeadNumber:    nil,
+		TTDReached:          false,
+		NextFeeRecipient:    common.Address{},
 		LatestForkchoice: api.ForkchoiceStateV1{
 			HeadBlockHash:      common.Hash{},
 			SafeBlockHash:      common.Hash{},
 			FinalizedBlockHash: common.Hash{},
 		},
-		ShanghaiTimestamp: shanghaiTime,
-		TestContext:       context.Background(),
+		ChainTotalDifficulty: genesis.Difficulty,
+		ForkConfig:           forkConfig,
+		Genesis:              genesis,
+		TestContext:          context.Background(),
 	}
 
+	// Create header history
+	newCLMocker.HeaderHistory = make(map[uint64]*types.Header)
+
+	// Add genesis to the header history
+	newCLMocker.HeaderHistory[0] = genesis.ToBlock().Header()
+
 	return newCLMocker
+}
+
+// Return genesis block of the canonical chain
+func (cl *CLMocker) GenesisBlock() *types.Block {
+	return cl.Genesis.ToBlock()
 }
 
 // Add a Client to be kept in sync with the latest payloads
@@ -197,6 +222,46 @@ func (cl *CLMocker) IsOptimisticallySyncing() bool {
 	return diff.Cmp(cl.SafeSlotsToImportOptimistically) >= 0
 }
 
+// Chain State Information
+func (cl *CLMocker) ForkID() forkid.ID {
+	return forkid.NewID(cl.Genesis.Config, cl.GenesisBlock(), cl.LatestHeader.Number.Uint64(), cl.LatestHeader.Time)
+}
+
+func (cl *CLMocker) GetHeaders(amount uint64, originHash common.Hash, originNumber uint64, reverse bool, skip uint64) ([]*types.Header, error) {
+	if amount < 1 {
+		return nil, errors.New("no block headers requested")
+	}
+
+	headers := make([]*types.Header, amount)
+	var blockNumber uint64
+
+	// range over blocks to check if our chain has the requested header
+	for _, h := range cl.HeaderHistory {
+		if h.Hash() == originHash || h.Number.Uint64() == originNumber {
+			headers[0] = h
+			blockNumber = h.Number.Uint64()
+		}
+	}
+	if headers[0] == nil {
+		return nil, fmt.Errorf("no headers found for given origin number %v, hash %v", originNumber, originHash)
+	}
+
+	if reverse {
+		for i := 1; i < int(amount); i++ {
+			blockNumber -= (1 - skip)
+			headers[i] = cl.HeaderHistory[blockNumber]
+		}
+		return headers, nil
+	}
+
+	for i := 1; i < int(amount); i++ {
+		blockNumber += (1 + skip)
+		headers[i] = cl.HeaderHistory[blockNumber]
+	}
+
+	return headers, nil
+}
+
 // Sets the specified client's chain head as Terminal PoW block by sending the initial forkchoiceUpdated.
 func (cl *CLMocker) SetTTDBlockClient(ec client.EngineClient) {
 	var err error
@@ -207,18 +272,20 @@ func (cl *CLMocker) SetTTDBlockClient(ec client.EngineClient) {
 	if err != nil {
 		cl.Fatalf("CLMocker: Unable to get latest header: %v", err)
 	}
+	cl.HeaderHistory[cl.LatestHeader.Number.Uint64()] = cl.LatestHeader
 
 	ctx, cancel = context.WithTimeout(cl.TestContext, globals.RPCTimeout)
 	defer cancel()
 
-	if ttd, err := ec.GetTotalDifficulty(ctx); err != nil {
+	if td, err := ec.GetTotalDifficulty(ctx); err != nil {
 		cl.Fatalf("CLMocker: Error getting total difficulty from engine client: %v", err)
-	} else if ttd.Cmp(ec.TerminalTotalDifficulty()) < 0 {
-		cl.Fatalf("CLMocker: Attempted to set TTD Block when TTD had not been reached: %d > %d", ec.TerminalTotalDifficulty(), ttd)
+	} else if td.Cmp(ec.TerminalTotalDifficulty()) < 0 {
+		cl.Fatalf("CLMocker: Attempted to set TTD Block when TTD had not been reached: %d > %d", ec.TerminalTotalDifficulty(), td)
 	} else {
-		cl.Logf("CLMocker: TTD has been reached at block %d (%d>=%d)\n", cl.LatestHeader.Number, ttd, ec.TerminalTotalDifficulty())
+		cl.Logf("CLMocker: TTD has been reached at block %d (%d>=%d)\n", cl.LatestHeader.Number, td, ec.TerminalTotalDifficulty())
 		jsH, _ := json.MarshalIndent(cl.LatestHeader, "", " ")
-		cl.Logf("CLMocker: Block %d: %s\n", cl.LatestHeader.Number, jsH)
+		cl.Logf("CLMocker: Client: %s, Block %d: %s\n", ec.ID(), cl.LatestHeader.Number, jsH)
+		cl.ChainTotalDifficulty = td
 	}
 
 	cl.TTDReached = true
@@ -255,9 +322,6 @@ func (cl *CLMocker) IsBlockPoS(bn *big.Int) bool {
 
 // Return the per-block timestamp value increment
 func (cl *CLMocker) GetTimestampIncrement() uint64 {
-	if cl.BlockTimestampIncrement == nil {
-		return 1
-	}
 	return cl.BlockTimestampIncrement.Uint64()
 }
 
@@ -314,39 +378,86 @@ func (cl *CLMocker) SetNextWithdrawals(nextWithdrawals types.Withdrawals) {
 	cl.NextWithdrawals = nextWithdrawals
 }
 
-func (cl *CLMocker) RequestNextPayload() {
+func (cl *CLMocker) MakeNextWithdrawals() types.Withdrawals {
+	withdrawalCount := uint64(10)
+	withdrawalIndex := uint64(0)
+
+	if cl.LatestPayloadBuilt.Withdrawals != nil {
+		for _, w := range cl.LatestPayloadBuilt.Withdrawals {
+			if w.Index > withdrawalIndex {
+				withdrawalIndex = w.Index
+			}
+		}
+	}
+
+	withdrawals := make(types.Withdrawals, withdrawalCount)
+
+	for i := uint64(0); i < withdrawalCount; i++ {
+		withdrawalIndex += 1
+		withdrawals[i] = &types.Withdrawal{
+			Index:     withdrawalIndex,
+			Validator: i,
+			Address:   common.Address{byte(i)},
+			Amount:    100,
+		}
+	}
+
+	return withdrawals
+}
+
+func TimestampToBeaconRoot(timestamp uint64) common.Hash {
+	// Generates a deterministic hash from the timestamp
+	beaconRoot := common.Hash{}
+	timestampBytes := make([]byte, 8)
+	binary.BigEndian.PutUint64(timestampBytes[:], timestamp)
+	md := sha256.New()
+	md.Write(timestampBytes)
+	timestampHash := md.Sum(nil)
+	copy(beaconRoot[:], timestampHash)
+	return beaconRoot
+}
+
+func (cl *CLMocker) GeneratePayloadAttributes() {
 	// Generate a random value for the PrevRandao field
 	nextPrevRandao := common.Hash{}
 	rand.Read(nextPrevRandao[:])
 
-	cl.LatestPayloadAttributes = api.PayloadAttributes{
+	cl.LatestPayloadAttributes = typ.PayloadAttributes{
 		Random:                nextPrevRandao,
 		SuggestedFeeRecipient: cl.NextFeeRecipient,
 		Timestamp:             cl.GetNextBlockTimestamp(),
 	}
 
-	if isShanghai(cl.LatestPayloadAttributes.Timestamp, cl.ShanghaiTimestamp) && cl.NextWithdrawals != nil {
+	if cl.IsShanghai(cl.LatestPayloadAttributes.Timestamp) && cl.NextWithdrawals != nil {
 		cl.LatestPayloadAttributes.Withdrawals = cl.NextWithdrawals
+	}
+
+	if cl.IsCancun(cl.LatestPayloadAttributes.Timestamp) {
+		// Write a deterministic hash based on the block number
+		beaconRoot := TimestampToBeaconRoot(cl.LatestPayloadAttributes.Timestamp)
+		cl.LatestPayloadAttributes.BeaconRoot = &beaconRoot
 	}
 
 	// Save random value
 	cl.PrevRandaoHistory[cl.LatestHeader.Number.Uint64()+1] = nextPrevRandao
+}
 
+func (cl *CLMocker) AddPayloadID(newPayloadID *api.PayloadID) error {
+	if newPayloadID == nil {
+		return errors.New("nil payload ID")
+	}
+	if _, ok := cl.PayloadIDHistory[*newPayloadID]; ok {
+		return fmt.Errorf("reused payload ID: %v", *newPayloadID)
+	}
+	cl.PayloadIDHistory[*newPayloadID] = nil
+	return nil
+}
+
+func (cl *CLMocker) RequestNextPayload() {
 	ctx, cancel := context.WithTimeout(cl.TestContext, globals.RPCTimeout)
 	defer cancel()
-	var (
-		resp       api.ForkChoiceResponse
-		fcUVersion int
-		err        error
-	)
-	if isShanghai(cl.LatestPayloadAttributes.Timestamp, cl.ShanghaiTimestamp) {
-		fcUVersion = 2
-		resp, err = cl.NextBlockProducer.ForkchoiceUpdatedV2(ctx, &cl.LatestForkchoice, &cl.LatestPayloadAttributes)
-
-	} else {
-		fcUVersion = 1
-		resp, err = cl.NextBlockProducer.ForkchoiceUpdatedV1(ctx, &cl.LatestForkchoice, &cl.LatestPayloadAttributes)
-	}
+	fcUVersion := cl.ForkConfig.ForkchoiceUpdatedVersion(cl.LatestHeader.Time, &cl.LatestPayloadAttributes.Timestamp)
+	resp, err := cl.NextBlockProducer.ForkchoiceUpdated(ctx, fcUVersion, &cl.LatestForkchoice, &cl.LatestPayloadAttributes)
 	if err != nil {
 		cl.Fatalf("CLMocker: Could not send forkchoiceUpdatedV%d (%v): %v", fcUVersion, cl.NextBlockProducer.ID(), err)
 	}
@@ -356,6 +467,9 @@ func (cl *CLMocker) RequestNextPayload() {
 	if resp.PayloadStatus.LatestValidHash == nil || *resp.PayloadStatus.LatestValidHash != cl.LatestForkchoice.HeadBlockHash {
 		cl.Fatalf("CLMocker: Unexpected forkchoiceUpdated LatestValidHash Response from Payload builder: %v != %v", resp.PayloadStatus.LatestValidHash, cl.LatestForkchoice.HeadBlockHash)
 	}
+	if err = cl.AddPayloadID(resp.PayloadID); err != nil {
+		cl.Fatalf("CLMocker: Payload ID failure: %v", err)
+	}
 	cl.NextPayloadID = resp.PayloadID
 }
 
@@ -363,13 +477,9 @@ func (cl *CLMocker) GetNextPayload() {
 	var err error
 	ctx, cancel := context.WithTimeout(cl.TestContext, globals.RPCTimeout)
 	defer cancel()
-	if isShanghai(cl.LatestPayloadAttributes.Timestamp, cl.ShanghaiTimestamp) {
-		cl.LatestPayloadBuilt, cl.LatestBlockValue, err = cl.NextBlockProducer.GetPayloadV2(ctx, cl.NextPayloadID)
+	version := cl.ForkConfig.GetPayloadVersion(cl.LatestPayloadAttributes.Timestamp)
+	cl.LatestPayloadBuilt, cl.LatestBlockValue, cl.LatestBlobBundle, cl.LatestShouldOverrideBuilder, err = cl.NextBlockProducer.GetPayload(ctx, version, cl.NextPayloadID)
 
-	} else {
-		cl.LatestPayloadBuilt, err = cl.NextBlockProducer.GetPayloadV1(ctx, cl.NextPayloadID)
-		cl.LatestBlockValue = nil
-	}
 	if err != nil {
 		cl.Fatalf("CLMocker: Could not getPayload (%v, %v): %v", cl.NextBlockProducer.ID(), cl.NextPayloadID, err)
 	}
@@ -388,12 +498,28 @@ func (cl *CLMocker) GetNextPayload() {
 	if cl.LatestPayloadBuilt.Number != cl.LatestHeader.Number.Uint64()+1 {
 		cl.Fatalf("CLMocker: Incorrect Number on payload built: %v != %v", cl.LatestPayloadBuilt.Number, cl.LatestHeader.Number.Uint64()+1)
 	}
+
+	if cl.IsCancun(cl.LatestPayloadBuilt.Timestamp) {
+		// Check if we have blobs to include in the broadcast
+		if cl.LatestBlobBundle == nil {
+			cl.Fatalf("CLMocker: No blob bundle on cancun")
+		}
+		// Broadcast the blob bundle to all clients
+		cl.LatestPayloadBuilt.VersionedHashes, err = cl.LatestBlobBundle.VersionedHashes(cancun.BLOB_COMMITMENT_VERSION_KZG)
+		if err != nil {
+			cl.Fatalf("CLMocker: Could not get versioned hashes from blob bundle: %v", err)
+		}
+		cl.LatestPayloadBuilt.ParentBeaconBlockRoot = cl.LatestPayloadAttributes.BeaconRoot
+	}
+	cl.LatestPayloadBuilt.PayloadAttributes = cl.LatestPayloadAttributes
 }
 
 func (cl *CLMocker) broadcastNextNewPayload() {
+
 	// Broadcast the executePayload to all clients
-	responses := cl.BroadcastNewPayload(&cl.LatestPayloadBuilt)
-	for _, resp := range responses {
+	version := cl.ForkConfig.NewPayloadVersion(cl.LatestPayloadBuilt.Timestamp)
+	validations := 0
+	for _, resp := range cl.BroadcastNewPayload(&cl.LatestPayloadBuilt, version) {
 		if resp.Error != nil {
 			cl.Logf("CLMocker: BroadcastNewPayload Error (%v): %v\n", resp.Container, resp.Error)
 		} else {
@@ -407,6 +533,7 @@ func (cl *CLMocker) broadcastNextNewPayload() {
 				if *resp.ExecutePayloadResponse.LatestValidHash != cl.LatestPayloadBuilt.BlockHash {
 					cl.Fatalf("CLMocker: NewPayload returned VALID status with incorrect LatestValidHash==%v, expected %v", resp.ExecutePayloadResponse.LatestValidHash, cl.LatestPayloadBuilt.BlockHash)
 				}
+				validations += 1
 			} else if resp.ExecutePayloadResponse.Status == api.ACCEPTED {
 				// The client is not synced but the payload was accepted
 				// https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md:
@@ -422,16 +549,16 @@ func (cl *CLMocker) broadcastNextNewPayload() {
 			}
 		}
 	}
+	if validations == 0 {
+		cl.Fatalf("CLMocker: No clients validated the payload")
+	}
 	cl.LatestExecutedPayload = cl.LatestPayloadBuilt
 	payload := cl.LatestPayloadBuilt
 	cl.ExecutedPayloadHistory[cl.LatestPayloadBuilt.Number] = &payload
 }
 
 func (cl *CLMocker) broadcastLatestForkchoice() {
-	version := 1
-	if isShanghai(cl.LatestExecutedPayload.Timestamp, cl.ShanghaiTimestamp) {
-		version = 2
-	}
+	version := cl.ForkConfig.ForkchoiceUpdatedVersion(cl.LatestExecutedPayload.Timestamp, nil)
 	for _, resp := range cl.BroadcastForkchoiceUpdated(&cl.LatestForkchoice, nil, version) {
 		if resp.Error != nil {
 			cl.Logf("CLMocker: BroadcastForkchoiceUpdated Error (%v): %v\n", resp.Container, resp.Error)
@@ -455,13 +582,14 @@ func (cl *CLMocker) broadcastLatestForkchoice() {
 }
 
 type BlockProcessCallbacks struct {
-	OnPayloadProducerSelected func()
-	OnRequestNextPayload      func()
-	OnGetPayload              func()
-	OnNewPayloadBroadcast     func()
-	OnForkchoiceBroadcast     func()
-	OnSafeBlockChange         func()
-	OnFinalizedBlockChange    func()
+	OnPayloadProducerSelected    func()
+	OnPayloadAttributesGenerated func()
+	OnRequestNextPayload         func()
+	OnGetPayload                 func()
+	OnNewPayloadBroadcast        func()
+	OnForkchoiceBroadcast        func()
+	OnSafeBlockChange            func()
+	OnFinalizedBlockChange       func()
 }
 
 func (cl *CLMocker) ProduceSingleBlock(callbacks BlockProcessCallbacks) {
@@ -481,11 +609,17 @@ func (cl *CLMocker) ProduceSingleBlock(callbacks BlockProcessCallbacks) {
 	// Check if next withdrawals necessary, test can override this value on
 	// `OnPayloadProducerSelected` callback
 	if cl.NextWithdrawals == nil {
-		cl.SetNextWithdrawals(make(types.Withdrawals, 0))
+		cl.SetNextWithdrawals(cl.MakeNextWithdrawals())
 	}
 
 	if callbacks.OnPayloadProducerSelected != nil {
 		callbacks.OnPayloadProducerSelected()
+	}
+
+	cl.GeneratePayloadAttributes()
+
+	if callbacks.OnPayloadAttributesGenerated != nil {
+		callbacks.OnPayloadAttributesGenerated()
 	}
 
 	cl.RequestNextPayload()
@@ -553,9 +687,11 @@ func (cl *CLMocker) ProduceSingleBlock(callbacks BlockProcessCallbacks) {
 		defer cancel()
 		newHeader, err := ec.HeaderByNumber(ctx, cl.LatestHeadNumber)
 		if err != nil {
+			cl.Logf("CLMocker: Client %v did not accept the new payload: %v", ec.ID(), err)
 			continue
 		}
 		if newHeader.Hash() != cl.LatestPayloadBuilt.BlockHash {
+			cl.Logf("CLMocker: Client %v produced a new header with incorrect hash: %v != %v", ec.ID(), newHeader.Hash(), cl.LatestPayloadBuilt.BlockHash)
 			continue
 		}
 		// Check that the new finalized header has the correct properties
@@ -583,7 +719,8 @@ func (cl *CLMocker) ProduceSingleBlock(callbacks BlockProcessCallbacks) {
 	if cl.LatestHeader == nil {
 		cl.Fatalf("CLMocker: None of the clients accepted the newly constructed payload")
 	}
-
+	cl.HeaderHistory[cl.LatestHeadNumber.Uint64()] = cl.LatestHeader
+	cl.Logf("CLMocker: New block produced: number=%d, hash=%x", cl.LatestHeader.Number, cl.LatestHeader.Hash())
 }
 
 // Loop produce PoS blocks by using the Engine API
@@ -600,23 +737,13 @@ type ExecutePayloadOutcome struct {
 	Error                  error
 }
 
-func (cl *CLMocker) BroadcastNewPayload(payload *api.ExecutableData) []ExecutePayloadOutcome {
+func (cl *CLMocker) BroadcastNewPayload(ed *typ.ExecutableData, version int) []ExecutePayloadOutcome {
 	responses := make([]ExecutePayloadOutcome, len(cl.EngineClients))
 	for i, ec := range cl.EngineClients {
 		responses[i].Container = ec.ID()
 		ctx, cancel := context.WithTimeout(cl.TestContext, globals.RPCTimeout)
 		defer cancel()
-		var (
-			execPayloadResp api.PayloadStatusV1
-			err             error
-		)
-		if isShanghai(payload.Timestamp, cl.ShanghaiTimestamp) {
-			execPayloadResp, err = ec.NewPayloadV2(ctx, payload)
-		} else {
-			edv1 := &client_types.ExecutableDataV1{}
-			edv1.FromExecutableData(payload)
-			execPayloadResp, err = ec.NewPayloadV1(ctx, edv1)
-		}
+		execPayloadResp, err := ec.NewPayload(ctx, version, ed)
 		if err != nil {
 			cl.Errorf("CLMocker: Could not ExecutePayloadV1: %v", err)
 			responses[i].Error = err
@@ -634,7 +761,7 @@ type ForkChoiceOutcome struct {
 	Error              error
 }
 
-func (cl *CLMocker) BroadcastForkchoiceUpdated(fcstate *api.ForkchoiceStateV1, payloadAttr *api.PayloadAttributes, version int) []ForkChoiceOutcome {
+func (cl *CLMocker) BroadcastForkchoiceUpdated(fcstate *api.ForkchoiceStateV1, payloadAttr *typ.PayloadAttributes, version int) []ForkChoiceOutcome {
 	responses := make([]ForkChoiceOutcome, len(cl.EngineClients))
 	for i, ec := range cl.EngineClients {
 		responses[i].Container = ec.ID()
@@ -642,17 +769,9 @@ func (cl *CLMocker) BroadcastForkchoiceUpdated(fcstate *api.ForkchoiceStateV1, p
 		if cl.IsOptimisticallySyncing() || newPayloadStatus.Status == "VALID" {
 			ctx, cancel := context.WithTimeout(cl.TestContext, globals.RPCTimeout)
 			defer cancel()
-			var (
-				fcUpdatedResp api.ForkChoiceResponse
-				err           error
-			)
-			if version == 2 {
-				fcUpdatedResp, err = ec.ForkchoiceUpdatedV2(ctx, fcstate, payloadAttr)
-			} else if version == 1 {
-				fcUpdatedResp, err = ec.ForkchoiceUpdatedV1(ctx, fcstate, payloadAttr)
-			}
+			fcUpdatedResp, err := ec.ForkchoiceUpdated(ctx, version, fcstate, payloadAttr)
 			if err != nil {
-				cl.Errorf("CLMocker: Could not ForkchoiceUpdatedV1: %v", err)
+				cl.Errorf("CLMocker: Could not ForkchoiceUpdated: %v", err)
 				responses[i].Error = err
 			} else {
 				responses[i].ForkchoiceResponse = &fcUpdatedResp
