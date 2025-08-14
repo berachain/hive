@@ -1,8 +1,8 @@
-#ARG baseimage=ghcr.io/berachain/bera-reth
-#ARG tag=nightly
+ARG baseimage=ghcr.io/berachain/bera-reth
+ARG tag=nightly
 # Replacement image and tag to use local debug image built using `make docker-build-debug` from bera-reth repo
-ARG baseimage=bera-reth
-ARG tag=debug
+#ARG baseimage=bera-reth
+#ARG tag=debug
 
 FROM $baseimage:$tag as builder
 
