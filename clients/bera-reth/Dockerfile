@@ -1,5 +1,5 @@
 ARG baseimage=ghcr.io/berachain/bera-reth
-ARG tag=latest
+ARG tag=nightly
 
 FROM $baseimage:$tag as builder
 
