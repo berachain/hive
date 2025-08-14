@@ -1,0 +1,39 @@
+### Build Bera-Reth From Git:
+## Pulls bera-reth from a git repository and builds it from source.
+
+## Builder stage: Compiles bera-reth from a git repository
+FROM rust:latest as builder
+
+ARG github=berachain/bera-reth
+ARG tag=main
+
+RUN apt-get update && apt-get install -y libclang-dev pkg-config build-essential \
+    && echo "Cloning: $github - $tag" \
+    && git clone --depth 1 --branch $tag https://github.com/$github bera-reth \
+    && cd bera-reth && cargo build --release \
+    && cp target/release/bera-reth /usr/local/bin/bera-reth
+
+## Final stage: Sets up the environment for running bera-reth
+FROM debian:latest
+RUN apt-get update && apt-get install -y bash curl jq \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Copy compiled binary from builder
+COPY --from=builder /usr/local/bin/bera-reth /usr/local/bin/bera-reth
+
+# Add genesis mapper script, startup script, and enode URL retriever script
+COPY genesis.json /genesis.json
+COPY mapper.jq /mapper.jq
+COPY bera-reth.sh /bera-reth.sh
+COPY enode.sh /hive-bin/enode.sh
+
+# Set execute permissions for scripts
+RUN chmod +x /bera-reth.sh /hive-bin/enode.sh
+
+# Create version.txt
+RUN /usr/local/bin/bera-reth --version | head -2 | awk 'NR==1 {gsub("bera-reth ", ""); version=$0} NR==2 {gsub("Commit SHA: ", ""); sha=substr($0, 1, 8)} END {print version"+"sha}' > /version.txt
+
+# Export the usual networking ports
+EXPOSE 8545 8546 30303 30303/udp
+
+ENTRYPOINT ["/bera-reth.sh"]
