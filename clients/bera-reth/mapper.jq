@@ -76,5 +76,13 @@ def to_bool:
         "baseFeeUpdateFraction": (if env.HIVE_OSAKA_BLOB_BASE_FEE_UPDATE_FRACTION then env.HIVE_OSAKA_BLOB_BASE_FEE_UPDATE_FRACTION|to_int else 5007716 end)
       }
     },
+    "berachain": {
+      "prague1": {
+        "time": 18446744073709551615,
+        "baseFeeChangeDenominator": 48,
+        "minimumBaseFeeWei": 1000000000,
+        "polDistributorAddress": "0xD2f19a79b026Fb636A7c300bF5947df113940761"
+      }
+    },
   }|remove_empty
 }
