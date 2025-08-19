@@ -1,6 +1,6 @@
 # Pull bera-geth image
 ARG baseimage=ghcr.io/berachain/bera-geth
-ARG tag=v1.011602.1
+ARG tag=latest
 
 FROM $baseimage:$tag as builder
 
