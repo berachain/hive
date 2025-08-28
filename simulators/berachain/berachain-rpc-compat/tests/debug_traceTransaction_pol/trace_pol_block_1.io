@@ -1,0 +1,5 @@
+// Test tracing deterministic PoL transaction from block 1 after Prague1 activation
+// This transaction should be automatically inserted as the first transaction in the block
+// Replace POL_TX_HASH_BLOCK_1 with the actual deterministic PoL transaction hash from your generated chain
+>> {"jsonrpc":"2.0","method":"debug_traceTransaction","params":["0x0873e49521d481aedde44a2c009a5ae2289e17e6d6c10c81a703ca11df7e5bbc"],"id":1}
+<< {"jsonrpc":"2.0","result":{"gas":"0x5208","failed":false,"returnValue":"0x","structLogs":[{"pc":0,"op":"PUSH1","gas":999999,"gasCost":3,"stack":[]},{"pc":2,"op":"PUSH20","gas":999996,"gasCost":3,"stack":["0x1"]},{"pc":23,"op":"PUSH1","gas":999993,"gasCost":3,"stack":["0x1","0xd2f19a79b026fb636a7c300bf5947df113940761"]},{"pc":25,"op":"CALL","gas":999990,"gasCost":0,"stack":["0x1","0xd2f19a79b026fb636a7c300bf5947df113940761","0x0"]},{"pc":26,"op":"RETURN","gas":999990,"gasCost":0,"stack":["0x1"]}]},"id":1}
