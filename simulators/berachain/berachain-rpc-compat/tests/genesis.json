@@ -18,7 +18,7 @@
     "shanghaiTime": 0,
     "cancunTime": 0,
     "pragueTime": 0,
-    "terminalTotalDifficulty": 131072,
+    "terminalTotalDifficulty": 0,
     "depositContractAddress": "0x0000000000000000000000000000000000000000",
     "ethash": {},
     "blobSchedule": {
