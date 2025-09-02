@@ -150,6 +150,7 @@ func (g *generator) modifyBlock(i int, gen *core.BlockGen) {
 	fmt.Println("generating block", gen.Number())
 	g.setDifficulty(gen)
 	g.setParentBeaconRoot(gen)
+	g.setParentProposerPubkey(gen)
 	g.runModifiers(i, gen)
 	g.clRequests[gen.Number().Uint64()] = gen.ConsensusLayerRequests()
 }
@@ -176,6 +177,14 @@ func (g *generator) setParentBeaconRoot(gen *core.BlockGen) {
 		var h common.Hash
 		g.rand.Read(h[:])
 		gen.SetParentBeaconRoot(h)
+	}
+}
+
+func (g *generator) setParentProposerPubkey(gen *core.BlockGen) {
+	if g.genesis.Config.IsPrague1(gen.Number(), gen.Timestamp()) {
+		var h common.Pubkey
+		g.rand.Read(h[:])
+		gen.SetParentProposerPubkey(h)
 	}
 }
 
