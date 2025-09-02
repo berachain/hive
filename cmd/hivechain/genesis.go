@@ -46,6 +46,12 @@ var (
 		"shanghai",
 		"cancun",
 		"prague",
+		"prague1",
+	}
+
+	// berachain-specific forks that extend standard forks:
+	berachainForkNames = []string{
+		"prague1", // extends prague
 	}
 )
 
@@ -105,6 +111,11 @@ func (cfg *generatorConfig) createChainConfig() *params.ChainConfig {
 		case "prague":
 			chaincfg.PragueTime = &timestamp
 			chaincfg.BlobScheduleConfig.Prague = params.DefaultPragueBlobConfig
+		case "prague1":
+			chaincfg.Berachain.Prague1.Time = &timestamp
+			chaincfg.Berachain.Prague1.MinimumBaseFeeWei = 1000000000
+			chaincfg.Berachain.Prague1.BaseFeeChangeDenominator = 8
+			chaincfg.Berachain.Prague1.PoLDistributorAddress = common.HexToAddress("0x4200000000000000000000000000000000000042")
 		default:
 			panic(fmt.Sprintf("unknown fork name %q", fork))
 		}
@@ -194,6 +205,25 @@ func addEmitContract(ga types.GenesisAlloc) {
 func (cfg *generatorConfig) forkBlocks() map[string]uint64 {
 	lastIndex := cfg.lastForkIndex()
 	forks := allForkNames[:lastIndex+1]
+
+	// Remove berachain-specific forks if berachain is not configured
+	if !cfg.berachain {
+		var filteredForks []string
+		for _, fork := range forks {
+			isBerachainFork := false
+			for _, beraFork := range berachainForkNames {
+				if fork == beraFork {
+					isBerachainFork = true
+					break
+				}
+			}
+			if !isBerachainFork {
+				filteredForks = append(filteredForks, fork)
+			}
+		}
+		forks = filteredForks
+	}
+
 	forkBlocks := make(map[string]uint64)
 
 	// If merged chain is specified, schedule all pre-merge forks at block zero.
@@ -221,6 +251,7 @@ func (cfg *generatorConfig) forkBlocks() map[string]uint64 {
 	for _, f := range forks {
 		forkBlocks[f] = uint64(cfg.chainLength)
 	}
+
 	return forkBlocks
 }
 
