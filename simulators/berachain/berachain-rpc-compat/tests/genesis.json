@@ -35,7 +35,10 @@
     },
     "berachain": {
       "prague1": {
-        "polDistributorAddress": "0x0000000000000000000000000000000000000000"
+        "time": 450,
+        "baseFeeChangeDenominator": 8,
+        "minimumBaseFeeWei": 1000000000,
+        "polDistributorAddress": "0x4200000000000000000000000000000000000042"
       }
     }
   },

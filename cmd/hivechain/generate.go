@@ -185,7 +185,10 @@ func (g *generator) setParentProposerPubkey(gen *core.BlockGen) {
 	if g.genesis.Config.IsPrague1(gen.Number(), gen.Timestamp()) {
 		var h common.Pubkey
 		g.rand.Read(h[:])
-		gen.SetParentProposerPubkey(h)
+		err := gen.SetParentProposerPubkey(h)
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 
