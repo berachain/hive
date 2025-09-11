@@ -47,11 +47,13 @@ var (
 		"cancun",
 		"prague",
 		"prague1",
+		"prague2",
 	}
 
 	// berachain-specific forks that extend standard forks:
 	berachainForkNames = []string{
-		"prague1", // extends prague
+		"prague1",
+		"prague2",
 	}
 )
 
@@ -114,8 +116,11 @@ func (cfg *generatorConfig) createChainConfig() *params.ChainConfig {
 		case "prague1":
 			chaincfg.Berachain.Prague1.Time = &timestamp
 			chaincfg.Berachain.Prague1.MinimumBaseFeeWei = 1000000000
-			chaincfg.Berachain.Prague1.BaseFeeChangeDenominator = 8
+			chaincfg.Berachain.Prague1.BaseFeeChangeDenominator = 48
 			chaincfg.Berachain.Prague1.PoLDistributorAddress = common.HexToAddress("0x4200000000000000000000000000000000000042")
+		case "prague2":
+			chaincfg.Berachain.Prague2.Time = &timestamp
+			chaincfg.Berachain.Prague2.MinimumBaseFeeWei = 0
 		default:
 			panic(fmt.Sprintf("unknown fork name %q", fork))
 		}
