@@ -120,7 +120,8 @@ func (cfg *generatorConfig) createChainConfig() *params.ChainConfig {
 			chaincfg.Berachain.Prague1.PoLDistributorAddress = common.HexToAddress("0x4200000000000000000000000000000000000042")
 		case "prague2":
 			chaincfg.Berachain.Prague2.Time = &timestamp
-			chaincfg.Berachain.Prague2.MinimumBaseFeeWei = 0
+			// Set to 1 so that it doesn't get omitted.
+			chaincfg.Berachain.Prague2.MinimumBaseFeeWei = 1
 		default:
 			panic(fmt.Sprintf("unknown fork name %q", fork))
 		}
