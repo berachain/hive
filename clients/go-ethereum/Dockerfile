@@ -26,4 +26,13 @@ ADD genesis.json /genesis.json
 # Export the usual networking ports to allow outside access to the node
 EXPOSE 8545 8546 8547 8551 30303 30303/udp
 
+# Create a non-root user and group named 'appuser'
+RUN adduser -D appuser
+
+# Ensure 'appuser' owns the relevant files and directories
+RUN chown -R appuser /hive-bin /geth.sh /usr/local/bin/geth /version.txt /mapper.jq /genesis.json
+
+# Switch to the non-root user for subsequent instructions and container start
+USER appuser
+
 ENTRYPOINT ["/geth.sh"]
