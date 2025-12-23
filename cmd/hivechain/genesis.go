@@ -15,8 +15,9 @@ import (
 var initialBalance, _ = new(big.Int).SetString("1000000000000000000000000000000000000", 10)
 
 const (
-	genesisBaseFee = params.InitialBaseFee
-	blocktimeSec   = 10 // hard-coded in core.GenerateChain
+	genesisBaseFee  = params.InitialBaseFee
+	blocktimeSec    = 10 // hard-coded in core.GenerateChain
+	defaultGasLimit = 100_000_000
 )
 
 // Ethereum mainnet forks in order of introduction.
@@ -155,7 +156,7 @@ func (cfg *generatorConfig) createGenesis() *core.Genesis {
 	// Block attributes.
 	g.Difficulty = cfg.genesisDifficulty()
 	g.ExtraData = []byte("hivechain")
-	g.GasLimit = params.GenesisGasLimit * 8
+	g.GasLimit = cfg.gasLimit
 	zero := new(big.Int)
 	if g.Config.IsLondon(zero) {
 		g.BaseFee = big.NewInt(genesisBaseFee)
@@ -170,7 +171,7 @@ func (cfg *generatorConfig) createGenesis() *core.Genesis {
 	addCancunSystemContracts(g.Alloc)
 	addPragueSystemContracts(g.Alloc)
 	addSnapTestContract(g.Alloc)
-	addEmitContract(g.Alloc)
+	addModContracts(g.Alloc)
 	if cfg.berachain {
 		addMockPoLContracts(g.Config.Berachain, g.Alloc)
 	}
@@ -218,12 +219,19 @@ func addSnapTestContract(ga types.GenesisAlloc) {
 	}
 }
 
-const emitAddr = "0x7dcd17433742f4c0ca53122ab541d0ba67fc27df"
+const (
+	emitAddr      = "0x7dcd17433742f4c0ca53122ab541d0ba67fc27df"
+	largeLogsAddr = "0x8dcd17433742f4c0ca53122ab541d0ba67fc27ff"
+)
 
-func addEmitContract(ga types.GenesisAlloc) {
-	addr := common.HexToAddress(emitAddr)
-	ga[addr] = types.Account{
+// addModContracts adds the contracts used by block modifiers.
+func addModContracts(ga types.GenesisAlloc) {
+	ga[common.HexToAddress(emitAddr)] = types.Account{
 		Code:    emitCode,
+		Balance: new(big.Int),
+	}
+	ga[common.HexToAddress(largeLogsAddr)] = types.Account{
+		Code:    modLargeReceiptCode,
 		Balance: new(big.Int),
 	}
 }

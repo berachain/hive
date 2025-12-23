@@ -66,20 +66,28 @@ else
     cat /chainspec/test.json
 fi
 
+# Check sync mode.
+case "$HIVE_NODETYPE" in
+    "" | full | archive | snap) ;;
+    *)
+        echo "Unsupported HIVE_NODETYPE = $HIVE_NODETYPE"
+        exit 1 ;;
+esac
+
 # Generate the config file.
 mkdir /configs
-jq -n -f /mkconfig.jq > /configs/test.cfg
+jq -n -f /mkconfig.jq > /configs/test.json
 
-echo "test.cfg"
-cat /configs/test.cfg
+echo "test.json"
+cat /configs/test.json
 
 # Set bootnode.
 if [ -n "$HIVE_BOOTNODE" ]; then
-    mkdir -p /nethermind/Data
-    echo "[\"$HIVE_BOOTNODE\"]" > /nethermind/Data/static-nodes.json
+    echo "[\"$HIVE_BOOTNODE\"]" > /nethermind/static-nodes.json
 fi
 
 # Configure logging.
+export NO_COLOR=1
 LOG_FLAG=""
 if [ "$HIVE_LOGLEVEL" != "" ]; then
     case "$HIVE_LOGLEVEL" in
@@ -92,5 +100,6 @@ if [ "$HIVE_LOGLEVEL" != "" ]; then
     esac
     LOG_FLAG="--log $LOG"
 fi
+
 echo "Running Nethermind..."
-dotnet /nethermind/nethermind.dll --config /configs/test.cfg $LOG_FLAG
+/nethermind/nethermind --config /configs/test.json $LOG_FLAG

@@ -66,27 +66,23 @@ else
 fi
 
 # Handle any client mode or operation requests
-if [ "$HIVE_NODETYPE" == "archive" ]; then
-    FLAGS="$FLAGS --syncmode full --gcmode archive"
-fi
-if [ "$HIVE_NODETYPE" == "full" ]; then
-    FLAGS="$FLAGS --syncmode full"
-fi
-if [ "$HIVE_NODETYPE" == "light" ]; then
-    FLAGS="$FLAGS --syncmode light"
-fi
-if [ "$HIVE_NODETYPE" == "snap" ]; then
-    FLAGS="$FLAGS --syncmode snap"
-fi
-if [ "$HIVE_NODETYPE" == "" ]; then
-    FLAGS="$FLAGS --syncmode snap"
-fi
+case "$HIVE_NODETYPE" in
+    "" | full)
+        FLAGS="$FLAGS --syncmode full" ;;
+    archive)
+        FLAGS="$FLAGS --syncmode full --gcmode archive" ;;
+    snap)
+        FLAGS="$FLAGS --syncmode snap" ;;
+    *)
+        echo "Unsupported HIVE_NODETYPE = $HIVE_NODETYPE"
+        exit 1 ;;
+esac
 
 # Configure the chain.
 mv /genesis.json /genesis-input.json
 jq -f /mapper.jq /genesis-input.json > /genesis.json
 
-# Dump genesis. 
+# Dump genesis.
 if [ "$HIVE_LOGLEVEL" -lt 4 ]; then
     echo "Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):"
     jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
@@ -141,14 +137,9 @@ if [ "$HIVE_MINER_EXTRA" != "" ]; then
     FLAGS="$FLAGS --miner.extradata $HIVE_MINER_EXTRA"
 fi
 
-# Configure LES.
-if [ "$HIVE_LES_SERVER" == "1" ]; then
-  FLAGS="$FLAGS --light.serve 50 --light.nosyncserve"
-fi
-
 # Configure RPC.
-FLAGS="$FLAGS --http --http.addr=0.0.0.0 --http.port=8545 --http.api=admin,debug,eth,miner,net,personal,txpool,web3"
-FLAGS="$FLAGS --ws --ws.addr=0.0.0.0 --ws.origins \"*\" --ws.api=admin,debug,eth,miner,net,personal,txpool,web3"
+FLAGS="$FLAGS --http --http.addr=0.0.0.0 --http.port=8545 --http.api=admin,debug,eth,miner,net,txpool,web3"
+FLAGS="$FLAGS --ws --ws.addr=0.0.0.0 --ws.origins \"*\" --ws.api=admin,debug,eth,miner,net,txpool,web3"
 
 if [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" != "" ]; then
     echo "0x7365637265747365637265747365637265747365637265747365637265747365" > /jwtsecret
@@ -165,7 +156,9 @@ if [ "$HIVE_ALLOW_UNPROTECTED_TX" != "" ]; then
 fi
 
 # Run the go-ethereum implementation with the requested flags.
-FLAGS="$FLAGS --nat=none"
+ip=$(ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
+FLAGS="$FLAGS --nat=extip:$ip"
+
 # Disable disk space free monitor
 FLAGS="$FLAGS --datadir.minfreedisk=0"
 echo "Running go-ethereum with flags $FLAGS"
