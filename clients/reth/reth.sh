@@ -81,9 +81,6 @@ echo $FLAGS
 echo "Initializing database with genesis state..."
 $reth init $FLAGS --chain /genesis.json
 
-# Make sure pruner doesn't start
-echo -e "[prune]\\nblock_interval = 500_000" >> $DATADIR/reth.toml
-
 # make sure we use the same genesis each time
 FLAGS="$FLAGS --chain /genesis.json"
 
@@ -156,8 +153,8 @@ if [ -n "${HIVE_CLIQUE_PRIVATEKEY}" ] || [ -n "${HIVE_CLIQUE_PERIOD}" ]; then
 fi
 
 # Configure RPC.
-FLAGS="$FLAGS --http --http.addr=0.0.0.0 --http.api=admin,debug,eth,net,web3"
-FLAGS="$FLAGS --ws --ws.addr=0.0.0.0 --ws.api=admin,debug,eth,net,web3"
+FLAGS="$FLAGS --http --http.addr=0.0.0.0 --http.api=admin,debug,trace,eth,net,web3"
+FLAGS="$FLAGS --ws --ws.addr=0.0.0.0 --ws.api=admin,debug,trace,eth,net,web3"
 
 if [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" != "" ]; then
     JWT_SECRET="7365637265747365637265747365637265747365637265747365637265747365"
@@ -165,8 +162,8 @@ if [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" != "" ]; then
     FLAGS="$FLAGS --authrpc.addr=0.0.0.0 --authrpc.jwtsecret=/jwt.secret"
 fi
 
-# Configure NAT
-FLAGS="$FLAGS --nat none"
+# Configure NAT and disable pruning
+FLAGS="$FLAGS --nat none --block-interval 500000"
 
 # Launch the main client.
 echo "Running reth with flags: $FLAGS"

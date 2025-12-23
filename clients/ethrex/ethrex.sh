@@ -66,6 +66,18 @@ if [ "$HIVE_BOOTNODE" != "" ]; then
     FLAGS="$FLAGS --bootnodes=$HIVE_BOOTNODE"
 fi
 
+# Configure sync mode.
+case "$HIVE_NODETYPE" in
+    "" | full | archive)
+        syncmode="full" ;;
+    snap)
+        syncmode="snap" ;;
+    *)
+        echo "Unsupported HIVE_NODETYPE = $HIVE_NODETYPE"
+        exit 1 ;;
+esac
+FLAGS="$FLAGS --syncmode=$syncmode"
+
 # Configure any mining operation
 if [ "$HIVE_MINER" != "" ]; then
    echo "Warning: miner not supported."
@@ -94,6 +106,9 @@ else
     # We dont exit because some tests require this
     echo "Warning: HIVE_TERMINAL_TOTAL_DIFFICULTY not supported."
 fi
+
+# Set amount of milliseconds between each transaction broadcast
+FLAGS="$FLAGS --p2p.tx-broadcasting-interval=5"
 
 FLAGS="$FLAGS  $HIVE_ETHREX_FLAGS"
 

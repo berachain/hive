@@ -49,6 +49,9 @@ besu=/opt/besu/bin/besu
 # See https://github.com/hyperledger/besu/issues/1464
 export BESU_OPTS="-Dsecp256k1.randomize=false"
 
+# Use bonsai storage.
+FLAGS="--data-storage-format=BONSAI"
+
 # Configure logging.
 LOG=info
 case "$HIVE_LOGLEVEL" in
@@ -58,14 +61,14 @@ case "$HIVE_LOGLEVEL" in
     4)   LOG=DEBUG ;;
     5)   LOG=TRACE ;;
 esac
-FLAGS="--logging=$LOG --data-storage-format=BONSAI"
+FLAGS="$FLAGS --logging=$LOG --color-enabled=false"
 
 # Configure the chain.
 mv /genesis.json /genesis-input.json
 jq -f /mapper.jq /genesis-input.json > /genesis.json
 FLAGS="$FLAGS --genesis-file=/genesis.json "
 
-# Dump genesis. 
+# Dump genesis.
 if [ "$HIVE_LOGLEVEL" -lt 4 ]; then
     echo "Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):"
     jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
@@ -119,7 +122,7 @@ fi
 if [ "$HIVE_MINER_EXTRA" != "" ]; then
     FLAGS="$FLAGS --miner-extra-data=$HIVE_MINER_EXTRA"
 fi
-FLAGS="$FLAGS --min-gas-price=1 --tx-pool-price-bump=0 --Xeth-capability-max=69"
+FLAGS="$FLAGS --min-gas-price=1 --tx-pool-price-bump=0 --rpc-gas-cap=50000000"
 
 # Configure peer-to-peer networking.
 if [ "$HIVE_BOOTNODE" != "" ]; then
@@ -132,34 +135,40 @@ else
 fi
 
 # Configure sync mode
-#
-# light: not supported, full sync (per default)
-# not set: fast sync
-# archive, full or merge tests: full sync (per default)
-if [ "$HIVE_NODETYPE" == "light" ]; then
-    echo "Ignoring HIVE_NODETYPE == light: besu does not support light client"
-elif [ "$HIVE_NODETYPE" == "" ] && [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" == "" ]; then
-    FLAGS="$FLAGS --sync-mode=SNAP"
-fi
+case "$HIVE_NODETYPE" in
+    "" | "full" | "archive")
+        syncmode=FULL ;;
+    snap)
+        syncmode=SNAP ;;
+    *)
+        echo "Unsupported HIVE_NODETYPE = $HIVE_NODETYPE"
+        exit 1 ;;
+esac
+FLAGS="$FLAGS --sync-mode=$syncmode"
 
 # Enable Snap Server.
-FLAGS="$FLAGS --Xsnapsync-server-enabled"
+FLAGS="$FLAGS --snapsync-server-enabled"
 
 # Configure RPC.
 RPCFLAGS="--host-allowlist=*"
 if [ "$HIVE_GRAPHQL_ENABLED" == "" ]; then
-    RPCFLAGS="$RPCFLAGS --rpc-http-enabled --rpc-http-api=DEBUG,ETH,NET,WEB3,ADMIN --rpc-http-host=0.0.0.0"
+    RPCFLAGS="$RPCFLAGS --rpc-http-enabled --rpc-http-api=DEBUG,TRACE,ETH,NET,WEB3,ADMIN --rpc-http-host=0.0.0.0"
 else
     RPCFLAGS="$RPCFLAGS --graphql-http-enabled --graphql-http-host=0.0.0.0 --graphql-http-port=8545"
 fi
 
 # Enable WebSocket.
-RPCFLAGS="$RPCFLAGS --rpc-ws-enabled --rpc-ws-api=DEBUG,ETH,NET,WEB3,ADMIN --rpc-ws-host=0.0.0.0"
+RPCFLAGS="$RPCFLAGS --rpc-ws-enabled --rpc-ws-api=DEBUG,TRACE,ETH,NET,WEB3,ADMIN --rpc-ws-host=0.0.0.0"
 
 # Enable merge support if needed
 if [ "$HIVE_TERMINAL_TOTAL_DIFFICULTY" != "" ]; then
     echo "0x7365637265747365637265747365637265747365637265747365637265747365" > /jwtsecret
     RPCFLAGS="$RPCFLAGS --engine-host-allowlist=* --engine-jwt-secret /jwtsecret"
+fi
+
+# Disable parallel transaction processing
+if [ "$HIVE_PARALLEL_TX_PROCESSING_DISABLED" = "true" ]; then
+    FLAGS="$FLAGS --bonsai-parallel-tx-processing-enabled=false"
 fi
 
 # Start Besu.
